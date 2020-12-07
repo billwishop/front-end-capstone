@@ -1,6 +1,7 @@
 import {Route, Redirect} from "react-router-dom"
-import {Login} from "./components/auth/Login"
-import {Register} from "./components/auth/Register"
+import {Login} from "./auth/Login"
+import {Register} from "./auth/Register"
+import { NavBar } from "./nav/NavBar"
 
 
 export const Featurist = () => (
@@ -9,7 +10,7 @@ export const Featurist = () => (
             if (localStorage.getItem("app_user_id")) {
                 return (
                     <>
-                        //Components that are rendered when the user is authenticated go inside this React fragment
+                        <Route render={props => <NavBar {...props} />} />
                     </>
                 )
             } else {

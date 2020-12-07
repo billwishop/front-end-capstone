@@ -1,5 +1,12 @@
 {
-    "songs": [],
-    "users": [],
-    "stems": []
+  "songs": [],
+  "users": [
+    {
+      "email": "will@aol.com",
+      "password": "YES",
+      "name": "Will Bishop",
+      "id": 1
+    }
+  ],
+  "stems": []
 }
