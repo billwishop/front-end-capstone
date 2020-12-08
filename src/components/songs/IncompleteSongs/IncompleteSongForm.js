@@ -1,19 +1,82 @@
-import React, {useContext, useRef, useEffect} from "react"
+import React, {useContext, useRef} from "react"
 import { SongContext } from "../SongProvider"
-import { UserContext } from "../../users/UserProvider"
 import {firebaseKey} from "../../../firebase/Firebase"
-import firebase from 'firebase'
+import firebase from "firebase"
 
+const firebaseConfig = firebaseKey() // importing firebase key object 
+firebase.initializeApp(firebaseConfig) // firebase initialization
 
+export const IncompleteSongForm = props => {
+    const {addSong} = useContext(SongContext)
 
-export const SongForm = props => {
-    const {songs, getSongs, addSong} = useContext(SongContext)
-    const {users, getUsers} = useContext(UserContext)
+    let file //empty variable to store the audio file
+    let songName = useRef(null)
+    let incompleteDescription = useRef(null)
 
-    // importing firebase key object 
-    const config = firebaseKey()
+    const constructIncompleteSong = () => {
+        // firebase storage references
+        const storage = firebase.storage();
+        const storageRef = storage.ref();
+        const audioRef = storageRef.child('audio/' + file.name)
 
-    firebase.initializeApp(config)
+        console.log("uploading")
+        // audio upload to firebase
+        audioRef.put(file).then(() => {
+            console.log('Uploaded file!')
+            //retrieve firebase url after the upload
+            audioRef.getDownloadURL().then(function(url) {
+                console.log(url)
+                // pass new incomplete song object through addAudio 
+                addSong({
+                    userId: parseInt(localStorage.getItem('app_user_id')),
+                    incompleteUrl: url,
+                    songName: songName.current.value,
+                    incompleteDescription: incompleteDescription.current.value
+                })
+                // take user to browse page after upload
+                .then(() => props.history.push('/browse'))
+            })
+        })
+    }
+    // upload incomplete song form
+    return (
+        <form className="incompleteSongForm">
+            <h1 className="form__heading">upload an incomplete track</h1>
+            <h3 className="form__subheading">|| other users will help</h3>
+            <h3 className="form__subheading">|| you complete it</h3>
+
+            <input type="file" className="form__file"
+                    onChange={evt => {
+                        file = evt.target.files[0]
+                        console.log(file.name)
+                    }}>
+            </input>
+            
+            <label className="form__label">title</label>
+            <input type="text" className="form__title" ref={songName} 
+                    required autofocus placeholder="enter title here" />
+            
+            <label className="form__label">description</label>
+            <input type="text" className="form__description" ref={incompleteDescription} 
+                    required autoFocus placeholder="enter description here" />
+
+            <button className="form__button" type="submit"
+                onClick={evt => {
+                    console.log('submit button clicked')
+                    if(songName.current.value != ""){
+                        if(incompleteDescription.current.value != ""){
+                            evt.preventDefault()
+                            constructIncompleteSong()
+                        } else {
+                            window.alert("please enter a description")
+                        }
+                    } else {
+                        window.alert("please enter a song title")
+                    }
+                }}>Upload</button>
+        </form>
+
+    )
     
 }
 
