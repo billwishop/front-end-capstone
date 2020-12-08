@@ -1,11 +1,46 @@
 {
-  "songs": [],
+  "songs": [
+    {
+      "userId": 2,
+      "incompleteUrl": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=aabe0889-99e2-4d0e-885d-262b8384744e",
+      "songName": "Snare Sample",
+      "incompleteDescription": "Snare Sample",
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "incompleteUrl": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=aabe0889-99e2-4d0e-885d-262b8384744e",
+      "songName": "Snare Sample",
+      "incompleteDescription": "Snare Sample",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "incompleteUrl": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=aabe0889-99e2-4d0e-885d-262b8384744e",
+      "songName": "Snare Sample",
+      "incompleteDescription": "Snare Sample",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "incompleteUrl": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=aabe0889-99e2-4d0e-885d-262b8384744e",
+      "songName": "Snare Sample",
+      "incompleteDescription": "Snare Sample",
+      "id": 1
+    }
+  ],
   "users": [
     {
       "email": "will@aol.com",
       "password": "YES",
       "name": "Will Bishop",
       "id": 1
+    },
+    {
+      "email": "fox@aol.com",
+      "password": "YES",
+      "name": "Fox Mulder",
+      "id": 2
     }
   ],
   "stems": []
