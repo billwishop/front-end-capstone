@@ -6,7 +6,7 @@ export const SongProvider = props => {
     const [songs, setSongs] = useState([])
 
     const getSongs = () => {
-        return fetch("http://localhost:8088/songs")
+        return fetch("http://localhost:8088/songs/?_expand=user")
             .then(res => res.json())
             .then(setSongs)
     }

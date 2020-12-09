@@ -29,9 +29,13 @@ export const IncompleteSongForm = props => {
                 // pass new incomplete song object through addAudio 
                 addSong({
                     userId: parseInt(localStorage.getItem('app_user_id')),
-                    incompleteUrl: url,
                     songName: songName.current.value,
-                    incompleteDescription: incompleteDescription.current.value
+                    incompleteURL: url,
+                    completeURL: "",
+                    incompleteTimestamp: Date.now(),
+                    completeTimestamp: "",
+                    incompleteDescription: incompleteDescription.current.value,
+                    completeDescription: ""
                 })
                 // take user to browse page after upload
                 .then(() => props.history.push('/browse'))
@@ -54,7 +58,7 @@ export const IncompleteSongForm = props => {
             
             <label className="form__label">title</label>
             <input type="text" className="form__title" ref={songName} 
-                    required autofocus placeholder="enter title here" />
+                    required autoFocus placeholder="enter title here" />
             
             <label className="form__label">description</label>
             <input type="text" className="form__description" ref={incompleteDescription} 
