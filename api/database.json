@@ -1,32 +1,70 @@
 {
   "songs": [
     {
-      "userId": 2,
-      "incompleteUrl": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=aabe0889-99e2-4d0e-885d-262b8384744e",
-      "songName": "Snare Sample",
-      "incompleteDescription": "Snare Sample",
-      "id": 1
-    },
-    {
-      "userId": 2,
-      "incompleteUrl": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=aabe0889-99e2-4d0e-885d-262b8384744e",
-      "songName": "Snare Sample",
-      "incompleteDescription": "Snare Sample",
+      "userId": 1,
+      "songName": "Title: User 1 - Song 1",
+      "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
+      "completeURL": "",
+      "incompleteTimestamp": 1607458974778,
+      "completeTimestamp": "",
+      "incompleteDescription": "User 1's fave song",
+      "completeDescription": "",
       "id": 1
     },
     {
       "userId": 1,
-      "incompleteUrl": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=aabe0889-99e2-4d0e-885d-262b8384744e",
-      "songName": "Snare Sample",
-      "incompleteDescription": "Snare Sample",
-      "id": 1
+      "songName": "Title: User 1 - Song 2",
+      "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
+      "completeURL": "",
+      "incompleteTimestamp": 1607458974778,
+      "completeTimestamp": "",
+      "incompleteDescription": "User 1's fave song",
+      "completeDescription": "",
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "songName": "Title: User 2 - Song 3",
+      "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
+      "completeURL": "",
+      "incompleteTimestamp": 1607458974778,
+      "completeTimestamp": "",
+      "incompleteDescription": "User 2's fave song",
+      "completeDescription": "",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "songName": "Title: User 2 - Song 4",
+      "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
+      "completeURL": "",
+      "incompleteTimestamp": 1607458974778,
+      "completeTimestamp": "",
+      "incompleteDescription": "User 2's fave song",
+      "completeDescription": "",
+      "id": 4
+    },
+    {
+      "userId": 3,
+      "songName": "Title: User 3 - Song 5",
+      "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
+      "completeURL": "",
+      "incompleteTimestamp": 1607458974778,
+      "completeTimestamp": "",
+      "incompleteDescription": "User 3's fave song",
+      "completeDescription": "",
+      "id": 5
     },
     {
       "userId": 1,
-      "incompleteUrl": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=aabe0889-99e2-4d0e-885d-262b8384744e",
-      "songName": "Snare Sample",
-      "incompleteDescription": "Snare Sample",
-      "id": 1
+      "songName": "Title: User 1 - Song 6",
+      "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
+      "completeURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
+      "incompleteTimestamp": 1607458974778,
+      "completeTimestamp": 1607458974778,
+      "incompleteDescription": "User 1's fave song",
+      "completeDescription": "Great tune",
+      "id": 6
     }
   ],
   "users": [
@@ -41,6 +79,12 @@
       "password": "YES",
       "name": "Fox Mulder",
       "id": 2
+    },
+    {
+      "email": "dana@aol.com",
+      "password": "YES",
+      "name": "Dana Scully",
+      "id": 3
     }
   ],
   "stems": []
