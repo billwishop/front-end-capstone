@@ -6,7 +6,7 @@ export const StemProvider = props => {
     const [stems, setStems] = useState([])
 
     const getStems = () => {
-        return fetch("http://localhost:8088/stems")
+        return fetch("http://localhost:8088/stems/?_expand=song&_expand=user")
             .then(res => res.json())
             .then(setStems)
     }

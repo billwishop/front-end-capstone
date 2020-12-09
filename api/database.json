@@ -65,13 +65,24 @@
       "incompleteDescription": "User 1's fave song",
       "completeDescription": "Great tune",
       "id": 6
+    },
+    {
+      "userId": 2,
+      "songName": "Drummer's Gotta Drum",
+      "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
+      "completeURL": "",
+      "incompleteTimestamp": 1607482258989,
+      "completeTimestamp": "",
+      "incompleteDescription": "Drummer Boi",
+      "completeDescription": "",
+      "id": 7
     }
   ],
   "users": [
     {
-      "email": "will@aol.com",
+      "email": "frohike@aol.com",
       "password": "YES",
-      "name": "Will Bishop",
+      "name": "Frohike",
       "id": 1
     },
     {
@@ -85,7 +96,34 @@
       "password": "YES",
       "name": "Dana Scully",
       "id": 3
+    },
+    {
+      "email": "walter@aol.com",
+      "password": "YES",
+      "name": "Walter Skinner",
+      "id": 4
     }
   ],
-  "stems": []
+  "stems": [
+    {
+      "userId": 2,
+      "songId": 1,
+      "name": "Stem 1",
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
+      "timestamp": 1607482258995,
+      "description": "Drummer Boi",
+      "chosen": false,
+      "id": 1
+    },
+    {
+      "userId": 3,
+      "songId": 1,
+      "name": "Stem 2",
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
+      "timestamp": 1607482258970,
+      "description": "Gotta Drum",
+      "chosen": true,
+      "id": 2
+    }
+  ]
 }
