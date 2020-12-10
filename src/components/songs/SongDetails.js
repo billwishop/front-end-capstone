@@ -3,6 +3,7 @@ import { SongContext } from './SongProvider'
 import { StemContext } from '../stems/StemProvider'
 import { SongDetailsCard } from './SongDetailsCard'
 import { StemCard } from '../stems/StemCard'
+import './Song.css'
 
 export const SongDetail = props => {
     const {songs, getSongs} = useContext(SongContext)
@@ -33,8 +34,6 @@ export const SongDetail = props => {
     console.log("song:", song)
     console.log("stems", filteredStems)
 
-
-
     
     return (
         <div className="song__card">
@@ -54,9 +53,16 @@ export const SongDetail = props => {
             </section>
 
             <section className="song__right">
-
+                    {(song.completeURL || parseInt(localStorage.getItem("app_user_id")) === song.userId)
+                        ? "" 
+                        :<button>add to the song</button>}
+                    {(song.completeURL || parseInt(localStorage.getItem("app_user_id")) !== song.userId)
+                        ? "" 
+                        :<button>mark as complete</button>}
+                        
             </section>
 
         </div>
     )
 }
+
