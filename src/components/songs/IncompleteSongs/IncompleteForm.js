@@ -77,7 +77,7 @@ export const IncompleteSongForm = props => {
                     } else {
                         window.alert("please enter a song title")
                     }
-                }}>Upload</button>
+                }}>submit</button>
         </form>
 
     )
