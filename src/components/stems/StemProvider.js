@@ -31,7 +31,11 @@ export const StemProvider = props => {
 
     const updateStem = (stemId, stemObj) => {
         return fetch(`http://localhost:8088/stems/${stemId}`, {
-            method: "PATCH"
+            method: "PATCH",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(stemObj)
         })
             .then(getStems)
     }
