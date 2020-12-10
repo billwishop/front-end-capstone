@@ -2,6 +2,7 @@ import React, {useContext, useRef, useState, useEffect} from "react"
 import { SongContext } from "../SongProvider"
 import firebase from "firebase"
 import { StemContext } from '../../stems/StemProvider'
+import { IncompleteSongCard } from "../IncompleteSongs/IncompleteSongCard"
 
 export const CompleteSongForm = props => {
     const {songs, completeSong, getSongs} = useContext(SongContext)
@@ -22,6 +23,12 @@ export const CompleteSongForm = props => {
         const filteredStems = stems.filter(s => s.songId === parseInt(props.match.params.songId)) 
         setStems(filteredStems)
     }, [stems])
+
+    // find the song id and set the state
+    useEffect(() => {
+        const song = songs.find(s => s.id === parseInt(props.match.params.songId)) || {}
+        setSong(song)
+    }, [songs])
 
     //empty variable to store the audio file
     let file 
@@ -47,47 +54,71 @@ export const CompleteSongForm = props => {
                     completeTimestamp: Date.now(),
                     completeDescription: completeDescription.current.value
                 })
-                // take user to browse page after upload
-                .then(() => props.history.push('/browse'))
+                // take user to the song page after upload
+                .then(() => props.history.push(`/song/${song.id}`))
             })
         })
     }
 
-    const markStemAsChosen = () => {
+    // responsible for responding to stem checkbox changes and marking chosed as true or false
+    const checkboxControl = (evt) => {
+        if(evt.target.checked === true){
+            updateStem(parseInt(evt.target.id), {chosen: true})
+        } else {
+            updateStem(parseInt(evt.target.id), {chosen: false})
+    }}
 
-    }
-
-    // upload incomplete song form
+    // upload complete song form
     return (
-        <form className="completeSongForm">
-            <h1 className="form__heading">upload completed track</h1>
+        <div>
 
-            <input type="file" className="form__file"
-                    onChange={evt => {
-                        file = evt.target.files[0]
-                        console.log(file.name)
-                    }}>
-            </input>
+            <div className="song__initial">
+                {song.id ?<IncompleteSongCard key={song.id} incompleteSong={song} /> :"Song Not Found"} 
+            </div>
+            <form className="completeSongForm">
+                <h1 className="form__heading">upload completed track</h1>
 
-            
+                <input type="file" className="form__file"
+                        onChange={evt => {
+                            file = evt.target.files[0]
+                            console.log(file.name)
+                        }}>
+                </input>
+                        
+                <div>
+                    <label>select chosen stems</label>
+                    <div className="stem__select" multiple>
+                    {
+                        filteredStems.map(stem => {
+                            return <div>
+                                <input type="checkbox" key={stem.id} id={stem.id} name="checkbox"
+                                    onChange={evt=>{
+                                        checkboxControl(evt);}} />
+                                <label htmlFor={stem.id}>{stem.name} by {stem.user.name}</label>
+                                </div>
+                        })
+                    }
+                    </div>
+                </div>
 
-            <label className="form__label">description</label>
-            <input type="text" className="form__description" ref={completeDescription} 
-                    required autoFocus placeholder="enter description here" />
+                <label className="form__label">description</label>
+                <input type="text" className="form__description" ref={completeDescription} 
+                        required autoFocus placeholder="enter description here" />
 
-            <button className="form__button" type="submit"
-                onClick={evt => {
-                    console.log('submit button clicked')
-                    
+                <button className="form__button" type="submit"
+                    onClick={evt => {
+                        console.log('submit button clicked')
+                        
                         if(completeDescription.current.value != ""){
                             evt.preventDefault()
                             constructCompleteSong()
                         } else {
                             window.alert("please enter a description")
                         }
-                    
-                }}>submit</button>
-        </form>
+                        
+                    }}>submit</button>
+            </form>
+        </div>
 
     )
     
