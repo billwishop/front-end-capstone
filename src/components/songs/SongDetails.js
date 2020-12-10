@@ -4,6 +4,7 @@ import { StemContext } from '../stems/StemProvider'
 import { SongDetailsCard } from './SongDetailsCard'
 import { StemCard } from '../stems/StemCard'
 import './Song.css'
+import { CompleteSongForm } from './CompleteSongs/CompleteForm'
 
 export const SongDetail = props => {
     const {songs, getSongs} = useContext(SongContext)
@@ -56,9 +57,24 @@ export const SongDetail = props => {
                     {(song.completeURL || parseInt(localStorage.getItem("app_user_id")) === song.userId)
                         ? "" 
                         :<button>add to the song</button>}
+
                     {(song.completeURL || parseInt(localStorage.getItem("app_user_id")) !== song.userId)
                         ? "" 
-                        :<button>mark as complete</button>}
+                        :<button onClick={evt =>{
+                            evt.preventDefault()
+                            props.history.push(`/song/complete/${song.id}`)}
+                            }>mark as complete</button>}
+                    
+                    {song.completeURL
+                        ? <div className='song__statusSection'>
+                            <h3 className='song__status'>complete</h3>
+                            <div className='song__description'>{song.completeDescription}</div>
+                        </div>
+                        : <div className='song__statusSection'>
+                        <h3 className='song__status'>in progress</h3>
+                        <div className='song__description'>{song.incompleteDescription}</div>
+                        </div>    
+                        }
                         
             </section>
 

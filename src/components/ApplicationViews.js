@@ -6,6 +6,7 @@ import { UserProvider } from './users/UserProvider';
 import { IncompleteBrowseList } from './songs/IncompleteSongs/IncompleteBrowseList'
 import { StemProvider } from './stems/StemProvider';
 import { SongDetail } from './songs/SongDetails';
+import { CompleteSongForm } from "./songs/CompleteSongs/CompleteForm"
 
 
 export const ApplicationViews = props => {
@@ -30,6 +31,9 @@ export const ApplicationViews = props => {
                     <StemProvider>
                         <Route path="/song/:songId(\d+)" render={
                             props => <SongDetail {...props} />
+                        } />
+                        <Route path="/song/complete/:songId(\d+)" render={
+                            props => <CompleteSongForm {...props} />
                         } />
                     </StemProvider>
                 </UserProvider>

@@ -29,10 +29,21 @@ export const SongProvider = props => {
             .then(getSongs)
     }
 
+    const completeSong = (songId, songObj) => {
+        return fetch(`http://localhost:8088/songs/${songId}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(songObj)
+        })
+        .then(getSongs)
+    }
+
     return (
         <SongContext.Provider value={
             {
-                songs, addSong, getSongs, deleteSong
+                songs, addSong, getSongs, deleteSong, completeSong
             }
         }>
             {props.children}
