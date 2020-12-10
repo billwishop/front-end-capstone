@@ -29,10 +29,17 @@ export const StemProvider = props => {
             .then(getStems)
     }
 
+    const updateStem = (stemId, stemObj) => {
+        return fetch(`http://localhost:8088/stems/${stemId}`, {
+            method: "PATCH"
+        })
+            .then(getStems)
+    }
+
     return (
         <StemContext.Provider value={
             {
-                stems, addStem, getStems, deleteStem
+                stems, addStem, getStems, deleteStem, updateStem
             }
         }>
             {props.children}

@@ -4,11 +4,11 @@
       "userId": 1,
       "songName": "Title: User 1 - Song 1",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
-      "completeURL": "",
+      "completeURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=e4f394be-fddf-49b5-9bbb-1bff69d1906f",
       "incompleteTimestamp": 1607458974778,
-      "completeTimestamp": "",
+      "completeTimestamp": 1607621845333,
       "incompleteDescription": "User 1's fave song",
-      "completeDescription": "",
+      "completeDescription": "this track is complete yall",
       "id": 1
     },
     {
@@ -59,11 +59,11 @@
       "userId": 1,
       "songName": "Title: User 1 - Song 6",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
-      "completeURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
+      "completeURL": "",
       "incompleteTimestamp": 1607458974778,
-      "completeTimestamp": 1607458974778,
+      "completeTimestamp": "",
       "incompleteDescription": "User 1's fave song",
-      "completeDescription": "Great tune",
+      "completeDescription": "",
       "id": 6
     },
     {
