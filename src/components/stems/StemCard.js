@@ -1,22 +1,33 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Link } from "react-router-dom"
 import ReactAudioPlayer from 'react-audio-player';
+import { StemContext } from './StemProvider'
 
 
-export const StemCard = ({ stem }) => (
+export const StemCard = ({ stem }) => {
+    const {deleteStem} = useContext(StemContext)
 
-    <div className="audio__card">
+    return (
+
+        <div className="audio__card">
         
         <h3 className="audio__title">
             {stem.chosen ? "FEATURED - " : ""}   
             {stem.name}
         </h3>
 
-        <div className="audio__username">
-            <Link to={`/profile/${stem.userId}`}>
-                {stem.user.name}
-            </Link>
-        </div>
+        {stem.userId === parseInt(localStorage.getItem("app_user_id"))
+            ?   <button onClick={evt =>{
+                evt.preventDefault()
+                deleteStem(stem.id)}
+            }>delete</button>
+            
+            :   <div className="audio__username">
+                    <Link to={`/profile/incomplete/${stem.userId}`}>
+                        {stem.user.name}
+                    </Link>
+                </div>
+        }
 
         <div className="audio__description">
             description: {stem.description}
@@ -29,6 +40,6 @@ export const StemCard = ({ stem }) => (
             controls
             />
 
-    </div>
-            
-)
+        </div>
+    )
+}
