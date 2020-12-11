@@ -12,6 +12,8 @@ export const CompleteSongForm = props => {
     const [song, setSong] = useState({})
     // filtered stem array
     const [filteredStems, setStems] = useState([])
+    // uploaded file
+    const [file, setFile] = useState({})
 
     useEffect(() => {
         getSongs()
@@ -21,6 +23,7 @@ export const CompleteSongForm = props => {
     // find the corresponding stems and set the state
     useEffect(() => {
         const filteredStems = stems.filter(s => s.songId === parseInt(props.match.params.songId)) 
+        console.log("stems state change")
         setStems(filteredStems)
     }, [stems])
 
@@ -30,11 +33,8 @@ export const CompleteSongForm = props => {
         setSong(song)
     }, [songs])
 
-    //empty variable to store the audio file
-    let file 
     // reference to description input field
     let completeDescription = useRef(null)
-
     const constructCompleteSong = () => {
         // firebase storage references
         const storage = firebase.storage();
@@ -65,8 +65,9 @@ export const CompleteSongForm = props => {
         if(evt.target.checked === true){
             updateStem(parseInt(evt.target.id), {chosen: true})
         } else {
-            updateStem(parseInt(evt.target.id), {chosen: false})
-    }}
+            updateStem(parseInt(evt.target.id), {chosen: false})            
+    } 
+}
 
     // upload complete song form
     return (
@@ -80,8 +81,7 @@ export const CompleteSongForm = props => {
 
                 <input type="file" className="form__file"
                         onChange={evt => {
-                            file = evt.target.files[0]
-                            console.log(file.name)
+                            setFile(evt.target.files[0])
                         }}>
                 </input>
                         

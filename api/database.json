@@ -59,11 +59,11 @@
       "userId": 1,
       "songName": "Title: User 1 - Song 6",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
-      "completeURL": "",
+      "completeURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=25c561ed-3fe1-40fe-abf7-02265f2d11d1",
       "incompleteTimestamp": 1607458974778,
-      "completeTimestamp": "",
+      "completeTimestamp": 1607705703797,
       "incompleteDescription": "User 1's fave song",
-      "completeDescription": "",
+      "completeDescription": "Can't believe how great this track turned out!! Thanks for the drums",
       "id": 6
     },
     {
@@ -142,7 +142,7 @@
       "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
       "timestamp": 1607482258970,
       "description": "Gotta Drum",
-      "chosen": true,
+      "chosen": false,
       "id": 4
     }
   ]
