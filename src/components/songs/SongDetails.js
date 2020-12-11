@@ -32,9 +32,6 @@ export const SongDetail = props => {
         setStems(filteredStems)
     }, [stems])
 
-    console.log("song:", song)
-    console.log("stems", filteredStems)
-
     
     return (
         <div className="song__card">
@@ -56,7 +53,10 @@ export const SongDetail = props => {
             <section className="song__right">
                     {(song.completeURL || parseInt(localStorage.getItem("app_user_id")) === song.userId)
                         ? "" 
-                        :<button>add to the song</button>}
+                        :<button onClick={evt =>{
+                            evt.preventDefault()
+                            props.history.push(`/song/stem/${song.id}`)}
+                            }>add to the song</button>}
 
                     {(song.completeURL || parseInt(localStorage.getItem("app_user_id")) !== song.userId)
                         ? "" 

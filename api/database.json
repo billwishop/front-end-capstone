@@ -144,6 +144,16 @@
       "description": "Gotta Drum",
       "chosen": false,
       "id": 4
+    },
+    {
+      "songId": 3,
+      "userId": 1,
+      "completeURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=2821e25c-c9c0-4bb2-b8b7-996468d0ff17",
+      "timestamp": 1607710037593,
+      "description": "crunchy cool bass yes",
+      "chosen": false,
+      "name": "New stem",
+      "id": 5
     }
   ]
 }
