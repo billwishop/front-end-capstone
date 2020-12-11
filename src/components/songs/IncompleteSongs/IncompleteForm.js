@@ -38,7 +38,7 @@ export const IncompleteSongForm = props => {
                     completeDescription: ""
                 })
                 // take user to browse page after upload
-                .then(() => props.history.push('/browse'))
+                .then(() => props.history.push('/'))
             })
         })
     }
@@ -62,7 +62,7 @@ export const IncompleteSongForm = props => {
             
             <label className="form__label">description</label>
             <input type="text" className="form__description" ref={incompleteDescription} 
-                    required autoFocus placeholder="enter description here" />
+                    required placeholder="enter description here" />
 
             <button className="form__button" type="submit"
                 onClick={evt => {

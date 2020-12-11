@@ -35,6 +35,7 @@ export const CompleteSongForm = props => {
 
     // reference to description input field
     let completeDescription = useRef(null)
+    
     const constructCompleteSong = () => {
         // firebase storage references
         const storage = firebase.storage();
