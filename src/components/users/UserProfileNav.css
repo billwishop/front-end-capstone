@@ -1,0 +1,17 @@
+.profileNavbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    padding: 12px 0;
+    height: 46px;
+    text-align: center;
+    box-sizing: border-box;
+    letter-spacing: .3em;
+    background-color: #DFDDFF;
+}
+
+.profileNavbar__item {
+    flex-basis: 20%;
+    list-style-type: none;
+    color: black;
+}
