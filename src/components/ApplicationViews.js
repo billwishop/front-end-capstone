@@ -8,6 +8,10 @@ import { StemProvider } from './stems/StemProvider';
 import { SongDetail } from './songs/SongDetails';
 import { CompleteSongForm } from "./songs/CompleteSongs/CompleteForm"
 import { StemForm } from "./stems/StemForm"
+import { ProfileIncompleteList } from './users/UserIncompleteList';
+import { ProfileCompleteList } from './users/UserCompleteList'
+import { ProfileStemList } from './users/UserStemList'
+
 
 
 export const ApplicationViews = props => {
@@ -39,9 +43,28 @@ export const ApplicationViews = props => {
                         <Route path="/song/stem/:songId(\d+)" render={
                             props => <StemForm {...props} />
                         } />
+                        <Route path="/profile/incomplete/:userId(\d+)" render={
+                            props => <ProfileIncompleteList {...props} />
+                        } />
+                        <Route exact path="/profile/incomplete" render={
+                            props => <ProfileIncompleteList {...props} />
+                        } />
+                        <Route path="/profile/complete/:userId(\d+)" render={
+                            props => <ProfileCompleteList {...props} />
+                        } />
+                        <Route exact path="/profile/complete" render={
+                            props => <ProfileCompleteList {...props} />
+                        } />
+                        <Route path="/profile/stem/:userId(\d+)" render={
+                            props => <ProfileStemList {...props} />
+                        } />
+                        <Route exact path="/profile/stem" render={
+                            props => <ProfileStemList {...props} />
+                        } />
                     </StemProvider>
                 </UserProvider>
             </SongProvider>
         </>
     )
 }
+

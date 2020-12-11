@@ -3,6 +3,8 @@ import { ApplicationViews } from "./ApplicationViews"
 import {Login} from "./auth/Login"
 import {Register} from "./auth/Register"
 import { NavBar } from "./nav/NavBar"
+import { SongProvider } from "./songs/SongProvider"
+import { ProfileNavBar } from "./users/UserProfileNav"
 
 
 export const Featurist = () => (
@@ -24,3 +26,5 @@ export const Featurist = () => (
         <Route path="/register" render={props => <Register {...props} />} />
     </>
 )
+
+

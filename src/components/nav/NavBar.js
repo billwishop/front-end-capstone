@@ -17,7 +17,7 @@ export const NavBar = props => {
                 <Link className="navbar__link" to="/upload">upload</Link>
             </li>
             <li className="navbar__item">
-                <Link className="navbar__link" to="/profile">profile</Link>
+                <Link className="navbar__link" to="/profile/incomplete">profile</Link>
             </li>
         </ul>
     )

@@ -13,7 +13,7 @@ export const IncompleteSongCard = ({ incompleteSong }) => (
         </h3>
 
         <div className="audio__username">
-            <Link to={`/profile/${incompleteSong.userId}`}>
+            <Link to={`/profile/incomplete/${incompleteSong.userId}`}>
                 {incompleteSong.user.name}
             </Link>
         </div>
