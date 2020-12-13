@@ -159,7 +159,7 @@
     },
     {
       "userId": 3,
-      "songId": 6,
+      "songId": 2,
       "name": "Stem 4",
       "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
       "timestamp": 1607482258970,
@@ -169,13 +169,73 @@
     },
     {
       "userId": 1,
-      "songId": 6,
+      "songId": 3,
       "name": "Stem!!",
       "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
       "timestamp": 1607482258970,
       "description": "Great stem for your great track",
       "chosen": false,
       "id": 5
+    },
+    {
+      "userId": 2,
+      "songId": 4,
+      "name": "Stem 3",
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
+      "timestamp": 1607482258995,
+      "description": "Drummer Boi",
+      "chosen": true,
+      "id": 6
+    },
+    {
+      "userId": 3,
+      "songId": 7,
+      "name": "Stem 4",
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
+      "timestamp": 1607482258970,
+      "description": "Gotta Drum",
+      "chosen": false,
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "songId": 2,
+      "name": "Stem!!",
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
+      "timestamp": 1607482258970,
+      "description": "Great stem for your great track",
+      "chosen": false,
+      "id": 8
+    },
+    {
+      "songId": 4,
+      "userId": 1,
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=2ea80c7d-ccc8-4a5e-a2bb-283a32b2dd42",
+      "timestamp": 1607881658753,
+      "description": "Drums for your song",
+      "chosen": false,
+      "name": "New Stem ",
+      "id": 9
+    },
+    {
+      "userId": 3,
+      "songId": 8,
+      "name": "Stem!!",
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
+      "timestamp": 1607482258970,
+      "description": "Great stem for your great track",
+      "chosen": false,
+      "id": 10
+    },
+    {
+      "songId": 8,
+      "userId": 2,
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=2ea80c7d-ccc8-4a5e-a2bb-283a32b2dd42",
+      "timestamp": 1607881658753,
+      "description": "Drums for your song",
+      "chosen": true,
+      "name": "New Stem ",
+      "id":11
     }
   ]
 }
