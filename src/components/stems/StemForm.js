@@ -45,7 +45,7 @@ export const StemForm = props => {
                 addStem({
                     songId: parseInt(props.match.params.songId),
                     userId: parseInt(localStorage.getItem('app_user_id')),
-                    completeURL: url,
+                    url: url,
                     timestamp: Date.now(),
                     description: description.current.value,
                     chosen: false,

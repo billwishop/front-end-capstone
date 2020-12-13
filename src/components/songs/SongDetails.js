@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { SongContext } from './SongProvider'
 import { StemContext } from '../stems/StemProvider'
-import { SongDetailsCard } from './SongDetailsCard'
 import { StemCard } from '../stems/StemCard'
 import './Song.css'
-import { CompleteSongForm } from './CompleteSongs/CompleteForm'
+import { CompleteSongCard } from './CompleteSongs/CompleteSongCard'
+import { IncompleteSongCard } from './IncompleteSongs/IncompleteSongCard'
 
 export const SongDetail = props => {
     const {songs, getSongs} = useContext(SongContext)
@@ -38,10 +38,30 @@ export const SongDetail = props => {
 
             <section className="song__left">
 
-                <div className="song__initial">
-                    {song.id ?<SongDetailsCard key={song.id} song={song} /> :"Song Not Found"} 
+                <div className="song__details">
+                    {song.completeURL ? 
+                                        <>
+                                            <h1 className="song__header">complete track</h1> 
+                                            {(song.id ?<CompleteSongCard key={`complete--${song.id}`} completeSong={song} /> :"Song Not Found")}
+                                            <h2 className="song__header">original upload</h2> 
+                                            {(song.id ?<IncompleteSongCard key={`incomplete--${song.id}`} incompleteSong={song} /> :"Song Not Found")}
+                                            <div className="song__incompleteDescription">
+                                            origin upload: {song.incompleteDescription}
+                                            </div>
+                                        </>
+                                        : 
+                                        <>
+                                            <h1 className="song__header">original upload</h1> 
+                                            {(song.id ?<IncompleteSongCard key={`incomplete--${song.id}`} incompleteSong={song} /> :"Song Not Found")}
+                                        </>
+                    }
                 </div>
                 <div className="stems">
+                    {filteredStems.length > 1 
+                        ? <h2 className="stems__header">stem submissions</h2>
+                        : <h2 className="stems__header">stem submission</h2>
+                    }
+                    
                     {
                         filteredStems.map(stem => {
                             return <StemCard key={stem.id} stem={stem} />
