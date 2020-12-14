@@ -14,7 +14,7 @@ export const ProfileCompleteList = (props) => {
     }, [])
 
     /* 
-        if the active user is viewing their own profile
+        if the active user is viewing their own profile,
         the songs are filtered using the local storage.
         if the active user is viewing another user's 
         profile, they are filtered by the userId in the URL. 
@@ -31,14 +31,17 @@ export const ProfileCompleteList = (props) => {
 
     return (
         <div>
-            <Route render={props => <ProfileNavBar {...props} />} />        
-            <div>
+            <Route render={props => <ProfileNavBar {...props} />} />   
+            {filteredSongs.length
+                ? <div>
                 {
                     filteredSongs.map(song => {
                         return <CompleteSongCard key={song.id} completeSong={song} />
                     })
                 }
-            </div>
+                </div>
+                : "You have not yet marked a song as complete"
+            }     
         </div>
     )
 }

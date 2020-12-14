@@ -32,13 +32,15 @@ export const ProfileStemList = (props) => {
     return (
         <div>
             <Route render={props => <ProfileNavBar {...props} />} />        
-            <div>
+            {filteredStems.length 
+                ? <div>
                 {
                     filteredStems.map(stem => {
                         return <StemCard key={stem.id} stem={stem} />
                     })
                 }
-        </div>
+                </div>
+                : "You have not uploaded any stems"}
         </div>
     )
 }

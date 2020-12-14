@@ -57,9 +57,12 @@ export const SongDetail = props => {
                     }
                 </div>
                 <div className="stems">
-                    {filteredStems.length > 1 
-                        ? <h2 className="stems__header">stem submissions</h2>
-                        : <h2 className="stems__header">stem submission</h2>
+                    {filteredStems.length
+                        ? (filteredStems.length > 1 
+                            ? <h2 className="stems__header">stem submissions</h2>
+                            : <h2 className="stems__header">stem submission</h2>
+                        )
+                        : ""
                     }
                     
                     {
