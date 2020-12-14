@@ -9,7 +9,7 @@ export const StemCard = ({ stem }) => {
 
     return (
 
-        <div className="audio__card">
+        <div className={`audio__card ${stem.chosen ? 'featured' : ''}`}>
         
         <h3 className="audio__title">
             {stem.name}
@@ -18,15 +18,13 @@ export const StemCard = ({ stem }) => {
             {window.location.href.includes('profile') ?
                 <>
                 <div>
-                {stem.chosen ? `|| featured || on` : "submitted to "}  
-                </div>
-                <div>
+                {stem.chosen ? `Featured on ` : "Submitted to "}  
                 <Link to={`/song/${stem.songId}`}>
                     {stem.song.songName} 
                     </Link>
                 </div>
                 </>
-                :''}
+                :<>{stem.chosen ? "|| featured ||" :""}</>}
         
 
         {stem.userId === parseInt(localStorage.getItem("app_user_id"))
@@ -43,12 +41,12 @@ export const StemCard = ({ stem }) => {
         }
         
         <div className="audio__description">
-            description: {stem.description}
+            Description: {stem.description}
         </div>
 
         <ReactAudioPlayer
             key={stem.id}
-            className={`audio__player ${stem.chosen ? 'featured' : ''}`}
+            
             src={stem.url}
             controls
             />

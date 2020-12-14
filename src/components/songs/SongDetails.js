@@ -45,9 +45,6 @@ export const SongDetail = props => {
                                             {(song.id ?<CompleteSongCard key={`complete--${song.id}`} completeSong={song} /> :"Song Not Found")}
                                             <h2 className="song__header">original upload</h2> 
                                             {(song.id ?<IncompleteSongCard key={`incomplete--${song.id}`} incompleteSong={song} /> :"Song Not Found")}
-                                            <div className="song__incompleteDescription">
-                                            origin upload: {song.incompleteDescription}
-                                            </div>
                                         </>
                                         : 
                                         <>
@@ -92,7 +89,10 @@ export const SongDetail = props => {
                         ? <div className='song__statusSection'>
                             <h3 className='song__status'>complete</h3>
                             <div className='song__description'>{song.completeDescription}</div>
+                            <h3 className='song__status'>original request/description</h3>
+                            <div className='song__description'>{song.incompleteDescription}</div>
                         </div>
+ 
                         : <div className='song__statusSection'>
                         <h3 className='song__status'>in progress</h3>
                         <div className='song__description'>{song.incompleteDescription}</div>
