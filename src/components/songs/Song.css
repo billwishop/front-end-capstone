@@ -1,3 +1,63 @@
 .song__card {
     display: flex;
 }
+
+.audio__card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30em;
+    padding: 2em;
+    border-radius: 2em;
+    margin: 1em 0 2em 1em;
+    box-shadow:  
+        5px 5px #C8B9FF, 
+        8px 8px #605BFF,
+        11px 11px #C8B9FF,
+        14px 14px #605BFF; 
+    border: 1px solid #605BFF;
+}
+
+.audio__card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border: 0;
+}
+
+.featured {
+    background-color: #FFC700;
+    width: 32em;
+    min-height: 8em
+}
+
+.featured:hover {
+    background-color: #DFDDFF;
+}
+
+.song__details, .stems {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 2em;
+    border-radius: 2em;
+    margin: 1em 0 2em 1em;
+    min-width: 38em;
+    box-shadow:  
+        5px 5px #C8B9FF, 
+        8px 8px #605BFF,
+        11px 11px #C8B9FF,
+        14px 14px #605BFF; 
+    border: 1px solid #605BFF;
+}
+
+.song__right {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 2em;
+    border-radius: 2em;
+    margin: 1em 0 2em 1em;
+    min-width: 25em;
+    box-shadow:  
+        5px 5px #C8B9FF, 
+        8px 8px #605BFF,
+        11px 11px #C8B9FF,
+        14px 14px #605BFF; 
+    border: 1px solid #605BFF;
+}
