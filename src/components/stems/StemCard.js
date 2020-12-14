@@ -12,9 +12,22 @@ export const StemCard = ({ stem }) => {
         <div className="audio__card">
         
         <h3 className="audio__title">
-            {stem.chosen ? "FEATURED - " : ""}   
             {stem.name}
+
         </h3>
+            {window.location.href.includes('profile') ?
+                <>
+                <div>
+                {stem.chosen ? `|| featured || on` : "submitted to "}  
+                </div>
+                <div>
+                <Link to={`/song/${stem.songId}`}>
+                    {stem.song.songName} 
+                    </Link>
+                </div>
+                </>
+                :''}
+        
 
         {stem.userId === parseInt(localStorage.getItem("app_user_id"))
             ?   <button onClick={evt =>{
@@ -28,7 +41,7 @@ export const StemCard = ({ stem }) => {
                     </Link>
                 </div>
         }
-
+        
         <div className="audio__description">
             description: {stem.description}
         </div>

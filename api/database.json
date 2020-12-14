@@ -15,11 +15,11 @@
       "userId": 1,
       "songName": "Title: User 1 - Song 2",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
-      "completeURL": "",
+      "completeURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=a2d7d652-6171-4963-8fbf-4cec7a91b93f",
       "incompleteTimestamp": 1607458974778,
-      "completeTimestamp": "",
+      "completeTimestamp": 1607967243366,
       "incompleteDescription": "User 1's fave song",
-      "completeDescription": "",
+      "completeDescription": "Thanks Dana for the great contribution! This song rocks",
       "id": 2
     },
     {
@@ -186,7 +186,7 @@
       "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
       "timestamp": 1607482258970,
       "description": "Gotta Drum",
-      "chosen": false,
+      "chosen": true,
       "id": 4
     },
     {
@@ -342,12 +342,22 @@
     {
       "songId": 3,
       "userId": 1,
-      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=7fbc4065-e068-441d-ac8e-4d821c9b1dda",
-      "timestamp": 1607961468072,
-      "description": "Drums for your track",
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=ff3a9fc4-f093-4a87-9a29-503e95096ff1",
+      "timestamp": 1607967032167,
+      "description": "YES",
       "chosen": false,
-      "name": "Great Drums",
+      "name": "YES",
       "id": 27
+    },
+    {
+      "songId": 9,
+      "userId": 2,
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=06d04537-aef8-42d3-9b8a-943ec656d8f4",
+      "timestamp": 1607967596129,
+      "description": "Drums for your song from user 2",
+      "chosen": false,
+      "name": "Drums",
+      "id": 28
     }
   ]
 }
