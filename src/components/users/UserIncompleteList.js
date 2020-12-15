@@ -30,7 +30,7 @@ export const ProfileIncompleteList = (props) => {
     }, [songs])
 
     return (
-        <div>
+        <div className="profile">
             <Route render={props => <ProfileNavBar {...props} />} />        
             {filteredSongs.length 
                 ? <div>
@@ -40,7 +40,7 @@ export const ProfileIncompleteList = (props) => {
                     })
                 }
                 </div>
-                : "You have not uploaded any incomplete songs"}
+                : "No incomplete songs to display"}
         </div>
     )
 }

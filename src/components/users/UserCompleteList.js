@@ -8,6 +8,7 @@ export const ProfileCompleteList = (props) => {
     const { songs, getSongs } = useContext(SongContext)
 
     const [filteredSongs, SetSongs] = useState([])
+    const [user, SetUser] = useState({})
 
     useEffect(() => {
         getSongs()
@@ -30,8 +31,10 @@ export const ProfileCompleteList = (props) => {
     }, [songs])
 
     return (
-        <div>
-            <Route render={props => <ProfileNavBar {...props} />} />   
+        <div className="profile">
+            <Route render={props => <ProfileNavBar {...props} />} /> 
+            <div>
+
             {filteredSongs.length
                 ? <div>
                 {
@@ -40,8 +43,9 @@ export const ProfileCompleteList = (props) => {
                     })
                 }
                 </div>
-                : "You have not yet marked a song as complete"
+                : "No completed songs to display"
             }     
+            </div>
         </div>
     )
 }

@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import {Link} from "react-router-dom"
+import { SongContext } from "../songs/SongProvider"
 import './UserProfileNav.css'
+
 
 // sub navbar for the profile section
 export const ProfileNavBar = props => {
-
+    
     // if a userId is attached to the existing link, the userId will 
     // remain on the other links to ensure the user continues to view the same profile
         if(props.match.params.userId){

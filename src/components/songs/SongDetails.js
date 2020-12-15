@@ -89,6 +89,7 @@ export const SongDetail = props => {
                         ? <div className='song__statusSection'>
                             <h3 className='song__status'>complete</h3>
                             <div className='song__description'>{song.completeDescription}</div>
+                            <br />
                             <h3 className='song__status'>original request/description</h3>
                             <div className='song__description'>{song.incompleteDescription}</div>
                         </div>

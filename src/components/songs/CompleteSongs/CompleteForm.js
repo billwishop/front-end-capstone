@@ -72,7 +72,7 @@ export const CompleteSongForm = props => {
 
     // upload complete song form
     return (
-        <div>
+        <div className="completeSongForm">
 
             <div className="song__initial">
                 {song.id ?<IncompleteSongCard key={song.id} incompleteSong={song} /> :"Song Not Found"} 
@@ -87,7 +87,7 @@ export const CompleteSongForm = props => {
                 </input>
                         
                 <div>
-                    <label>select chosen stems</label>
+                    <h3>select chosen stem(s)</h3>
                     <div className="stem__select" multiple>
                     {
                         filteredStems.map(stem => {
@@ -102,7 +102,10 @@ export const CompleteSongForm = props => {
                     </div>
                 </div>
 
+                <div>
                 <label className="form__label">description</label>
+                </div>
+
                 <input type="text" className="form__description" ref={completeDescription} 
                         required autoFocus placeholder="enter description here" />
 
