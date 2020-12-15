@@ -30,7 +30,7 @@ export const ProfileStemList = (props) => {
     }, [stems])
 
     return (
-        <div>
+        <div className="profile">
             <Route render={props => <ProfileNavBar {...props} />} />        
             {filteredStems.length 
                 ? <div>
@@ -40,7 +40,7 @@ export const ProfileStemList = (props) => {
                     })
                 }
                 </div>
-                : "You have not uploaded any stems"}
+                : "No stems to display"}
         </div>
     )
 }

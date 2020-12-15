@@ -58,12 +58,12 @@ export const StemForm = props => {
     }
     // upload stem form
     return (
-        <div>
+        <div className="form">
             <div className="song__initial">
                     {song.id ?<IncompleteSongCard key={song.id} incompleteSong={song} /> :"Song Not Found"} 
                 </div>
-                <form className="completeSongForm"></form>
-            <form className="stemForm">
+
+            <form className="form">
                 <h1 className="form__heading">upload a stem</h1>
 
                 <input type="file" className="form__file"
@@ -72,13 +72,22 @@ export const StemForm = props => {
                         }}>
                 </input>
                 
+                <div>
                 <label className="form__label">title</label>
+                </div>
+                
+                <div>
                 <input type="text" className="form__title" ref={name} 
                         required autoFocus placeholder="enter stem name here" />
+                </div>
                 
+                <div>
                 <label className="form__label">description</label>
+                </div>
+                <div>
                 <input type="text" className="form__description" ref={description} 
                         required placeholder="enter description here" />
+                </div>
 
                 <button className="form__button" type="submit"
                     onClick={evt => {

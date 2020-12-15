@@ -26,11 +26,11 @@
       "userId": 2,
       "songName": "Title: User 2 - Song 3",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
-      "completeURL": "",
+      "completeURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
       "incompleteTimestamp": 1607458974778,
-      "completeTimestamp": "",
+      "completeTimestamp": 1607990180662,
       "incompleteDescription": "User 2's fave song",
-      "completeDescription": "",
+      "completeDescription": "So happy with how this turned out! Thanks for the great bass, Frohike!",
       "id": 3
     },
     {
@@ -345,7 +345,7 @@
       "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=ff3a9fc4-f093-4a87-9a29-503e95096ff1",
       "timestamp": 1607967032167,
       "description": "YES",
-      "chosen": false,
+      "chosen": true,
       "name": "YES",
       "id": 27
     },

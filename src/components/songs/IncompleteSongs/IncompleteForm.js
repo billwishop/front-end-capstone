@@ -48,36 +48,45 @@ export const IncompleteSongForm = props => {
             <h1 className="form__heading">upload an incomplete track</h1>
             <h3 className="form__subheading">|| other users will help</h3>
             <h3 className="form__subheading">|| you complete it</h3>
-        
-            <input type="file" className="form__file"
-                    onChange={evt => {
-                        file = evt.target.files[0]
-                        console.log(file.name)
-                    }}>
-            </input>
-            
-            <label className="form__label">title</label>
-            <input type="text" className="form__title" ref={songName} 
-                    required autoFocus placeholder="enter title here" />
-            
-            <label className="form__label">description</label>
-            <input type="text" className="form__description" ref={incompleteDescription} 
-                    required placeholder="enter description here" />
 
-            <button className="form__button" type="submit"
-                onClick={evt => {
-                    console.log('submit button clicked')
-                    if(songName.current.value != ""){
-                        if(incompleteDescription.current.value != ""){
-                            evt.preventDefault()
-                            constructIncompleteSong()
+            <div className="form">
+                <input type="file" className="form__file"
+                        onChange={evt => {
+                            file = evt.target.files[0]
+                            console.log(file.name)
+                        }}>
+                </input>
+
+                <div>
+                <label className="form__label">title</label>
+                </div>
+                <div>
+                <input type="text" className="form__title" ref={songName} 
+                        required autoFocus placeholder="enter title here" />
+                </div>
+
+                <div>
+                <label className="form__label">description</label>
+                </div>
+                <div>
+                <textarea type="text" className="form__description" ref={incompleteDescription} 
+                        required placeholder="enter description here" />
+                </div>
+                <button className="form__button" type="submit"
+                    onClick={evt => {
+                        console.log('submit button clicked')
+                        if(songName.current.value != ""){
+                            if(incompleteDescription.current.value != ""){
+                                evt.preventDefault()
+                                constructIncompleteSong()
+                            } else {
+                                window.alert("please enter a description")
+                            }
                         } else {
-                            window.alert("please enter a description")
+                            window.alert("please enter a song title")
                         }
-                    } else {
-                        window.alert("please enter a song title")
-                    }
-                }}>submit</button>
+                    }}>submit</button>
+            </div>
         </form>
 
     )
