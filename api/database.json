@@ -386,5 +386,41 @@
       "name": "Synth",
       "id": 29
     }
-  ]
+  ],
+  "requests": [
+    {
+      "id": 1,
+      "type": "drums"
+    },
+    {
+      "id": 2,
+      "type": "guitar"
+    },
+    {
+      "id": 3,
+      "type": "bass"
+    },
+    {
+      "id": 5,
+      "type": "keys"
+    },
+    {
+      "id": 6,
+      "type": "strings"
+    },
+    {
+      "id": 7,
+      "type": "brass"
+    },
+    {
+      "id": 7,
+      "type": "surprise me"
+    }
+  ],
+  "requestSongRelationships": [{
+    "id": 1,
+    "songId": 1,
+    "requestId": 2,
+    "userId": 2
+  }]
 }
