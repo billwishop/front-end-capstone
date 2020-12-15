@@ -6,7 +6,7 @@ export const RequestSongProvider = props => {
     const [requestSongs, setRequestSongs] = useState([])
 
     const getRequestSongs = () => {
-        return fetch("http://localhost:8088/requestsongrelationships/?_expand=request")
+        return fetch("http://localhost:8088/requestsongrelationships")
             .then(res => res.json())
             .then(setRequestSongs)
     }
@@ -21,6 +21,8 @@ export const RequestSongProvider = props => {
         })
             .then(getRequestSongs)
     }
+
+
 
     const deleteRequestSong = relationshipId => {
         return fetch(`http://localhost:8088/requestsongrelationships/${relationshipId}`, {

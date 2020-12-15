@@ -11,6 +11,8 @@ import { StemForm } from "./stems/StemForm"
 import { ProfileIncompleteList } from './users/UserIncompleteList';
 import { ProfileCompleteList } from './users/UserCompleteList'
 import { ProfileStemList } from './users/UserStemList'
+import { RequestProvider } from './requests/RequestProvider';
+import { RequestSongProvider } from './requestSongRelationships/RequestSongProvider';
 
 
 
@@ -18,9 +20,13 @@ export const ApplicationViews = props => {
     return (
         <>
             <SongProvider>
-                <Route exact path="/upload" render={
-                    props => <IncompleteSongForm {...props} />
-                } />
+                <RequestProvider>
+                        <RequestSongProvider>                            
+                            <Route exact path="/upload" render={
+                                props => <IncompleteSongForm {...props} />
+                            } />
+                        </RequestSongProvider>
+                </RequestProvider>
             </SongProvider>
 
             <SongProvider>

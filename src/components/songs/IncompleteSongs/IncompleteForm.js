@@ -1,15 +1,28 @@
-import React, {useContext, useRef} from "react"
+import React, { useContext, useRef, useEffect, useState } from "react"
 import { SongContext } from "../SongProvider"
-import {firebaseKey} from "../../../firebase/Firebase"
+import { firebaseKey } from "../../../firebase/Firebase"
 import firebase from "firebase"
+import { RequestContext } from "../../requests/RequestProvider"
+import { RequestSongContext } from "../../requestSongRelationships/RequestSongProvider"
 
 const firebaseConfig = firebaseKey() // importing firebase key object 
 firebase.initializeApp(firebaseConfig) // firebase initialization
 
 export const IncompleteSongForm = props => {
     const {addSong} = useContext(SongContext)
+    const {requests, getRequests} = useContext(RequestContext)
+    const {addRequestSong} = useContext(RequestSongContext)
 
-    let file //empty variable to store the audio file
+    // selected requests
+    const [selectedRequests, setSelectedRequests] = useState([])
+
+    // uploaded file
+    const [file, setFile] = useState({})
+
+    useEffect(() => {
+        getRequests()
+    }, [])
+
     let songName = useRef(null)
     let incompleteDescription = useRef(null)
 
@@ -26,7 +39,7 @@ export const IncompleteSongForm = props => {
             //retrieve firebase url after the upload
             audioRef.getDownloadURL().then(function(url) {
                 console.log(url)
-                // pass new incomplete song object through addAudio 
+                // pass new incomplete song object through addSong
                 addSong({
                     userId: parseInt(localStorage.getItem('app_user_id')),
                     songName: songName.current.value,
@@ -37,11 +50,40 @@ export const IncompleteSongForm = props => {
                     incompleteDescription: incompleteDescription.current.value,
                     completeDescription: ""
                 })
+                .then(newSongObj => {
+                    // remove duplicates if user checked a box twice
+                    let submittedRequests = [...new Set(selectedRequests)]
+
+                    submittedRequests.map(requestId => {
+                        
+                        const relationship = {
+                            songId: newSongObj.id,
+                            requestId: requestId
+                        }
+                        addRequestSong(relationship)
+                    })
+                })
                 // take user to browse page after upload
                 .then(() => props.history.push('/'))
             })
         })
     }
+    
+    const checkboxControl = (evt) => {
+        // check if box is being unchecked vs checked
+        if(evt.target.checked === true){
+            // set selected request state. add instead of replace.
+            setSelectedRequests(prev =>[...prev, parseInt(evt.target.id)]);
+        } else {
+            // remove item from array if unchecked
+            for(var i=0; i < selectedRequests.length; i++){
+                if(selectedRequests[i] === parseInt(evt.target.id)){
+                    selectedRequests.splice(i, 1);
+                    i--;
+                }
+            }
+    } 
+}
     // upload incomplete song form
     return (
         <form className="form">
@@ -52,7 +94,7 @@ export const IncompleteSongForm = props => {
             <div className="form">
                 <input type="file" className="form__file"
                         onChange={evt => {
-                            file = evt.target.files[0]
+                            setFile(evt.target.files[0])
                             console.log(file.name)
                         }}>
                 </input>
@@ -63,6 +105,20 @@ export const IncompleteSongForm = props => {
                 <div>
                 <input type="text" className="form__title" ref={songName} 
                         required autoFocus placeholder="enter title here" />
+                </div>
+
+                <div className="form__requests">
+                {
+                    requests.map(type => {
+                        return <>
+                            <input type="checkbox" key={type.id} id={type.id} name="checkbox"
+                                onChange={evt => {
+                                    checkboxControl(evt)
+                                }} />
+                                <label>{type.type}</label>
+                        </>
+                    })
+                }
                 </div>
 
                 <div>
@@ -77,14 +133,14 @@ export const IncompleteSongForm = props => {
                         console.log('submit button clicked')
                         if(songName.current.value != ""){
                             if(incompleteDescription.current.value != ""){
-                                evt.preventDefault()
+                                evt.preventDefault()                              
                                 constructIncompleteSong()
                             } else {
                                 window.alert("please enter a description")
                             }
                         } else {
                             window.alert("please enter a song title")
-                        }
+                        } 
                     }}>submit</button>
             </div>
         </form>
