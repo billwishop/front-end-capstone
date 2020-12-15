@@ -72,7 +72,7 @@ export const CompleteSongForm = props => {
 
     // upload complete song form
     return (
-        <div className="completeSongForm">
+        <div className="form">
 
             <div className="song__initial">
                 {song.id ?<IncompleteSongCard key={song.id} incompleteSong={song} /> :"Song Not Found"} 

@@ -37,11 +37,11 @@
       "userId": 1,
       "songName": "Title: User 1 - Song 9",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
-      "completeURL": "",
+      "completeURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=6a374281-edaa-4968-b8bd-7f10761d47da",
       "incompleteTimestamp": 1607458974778,
-      "completeTimestamp": "",
+      "completeTimestamp": 1608048530556,
       "incompleteDescription": "Very good song",
-      "completeDescription": "",
+      "completeDescription": "Thanks for the synth",
       "id": 9
     },
     {
@@ -120,6 +120,17 @@
       "incompleteDescription": "I don't know what it's missing. Surprise me!",
       "completeDescription": "",
       "id": 11
+    },
+    {
+      "userId": 1,
+      "songName": "Guitar",
+      "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=1cbe0109-0fec-411e-a721-54747cf1679c",
+      "completeURL": "",
+      "incompleteTimestamp": 1608048319538,
+      "completeTimestamp": "",
+      "incompleteDescription": "LEs Paul through a fender reverb",
+      "completeDescription": "",
+      "id": 12
     }
   ],
   "users": [
@@ -146,6 +157,12 @@
       "password": "YES",
       "name": "Walter Skinner",
       "id": 4
+    },
+    {
+      "email": "will@aol.com",
+      "password": "YES",
+      "name": "Will Bishop",
+      "id": 5
     }
   ],
   "stems": [
@@ -176,7 +193,7 @@
       "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
       "timestamp": 1607482258995,
       "description": "Drummer Boi",
-      "chosen": true,
+      "chosen": false,
       "id": 3
     },
     {
@@ -206,7 +223,7 @@
       "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
       "timestamp": 1607482258995,
       "description": "Drummer Boi",
-      "chosen": true,
+      "chosen": false,
       "id": 6
     },
     {
@@ -358,6 +375,16 @@
       "chosen": false,
       "name": "Drums",
       "id": 28
+    },
+    {
+      "songId": 9,
+      "userId": 5,
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=32b883b2-03f0-4e58-a19a-ba747f30ac5e",
+      "timestamp": 1608048420433,
+      "description": "RS-09",
+      "chosen": true,
+      "name": "Synth",
+      "id": 29
     }
   ]
 }
