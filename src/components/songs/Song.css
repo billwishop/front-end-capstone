@@ -47,9 +47,10 @@
         11px 11px #C8B9FF,
         14px 14px #605BFF; 
     border: 1px solid #605BFF;
+    background-color: white;
 }
 
-.song__right {
+.song__left, .song__right {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     padding: 2em;
@@ -64,7 +65,11 @@
     background-color: white;
 }
 
-.song__browse, .song__card {
+.song__left {
+    background-color: #FF8F87;
+}
+
+.song__card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     padding: 2em;
@@ -94,7 +99,7 @@
     transition: 0.3s;
     padding: 2em;
     border-radius: 2em;
-    margin: 4em 0 2em 1em;
+    margin: 4em auto 2em auto;
     box-shadow:  
         5px 5px #C8B9FF, 
         8px 8px #605BFF,
@@ -102,4 +107,5 @@
         14px 14px #605BFF; 
     border: 1px solid #605BFF;
     background-color: white;
+    /* width: 60em; */
 }
