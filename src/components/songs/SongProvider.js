@@ -19,7 +19,11 @@ export const SongProvider = props => {
             },
             body: JSON.stringify(song)
         })
-            .then(getSongs)
+            .then(res => res.json())
+            .then(newSongObject => {
+                getSongs()
+                return newSongObject
+            })
     }
 
     const deleteSong = songId => {

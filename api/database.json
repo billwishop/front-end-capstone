@@ -131,6 +131,17 @@
       "incompleteDescription": "LEs Paul through a fender reverb",
       "completeDescription": "",
       "id": 12
+    },
+    {
+      "userId": 2,
+      "songName": "new song",
+      "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ffd97dc6-baef-48e2-8cd0-fc06799efac3",
+      "completeURL": "",
+      "incompleteTimestamp": 1608074361637,
+      "completeTimestamp": "",
+      "incompleteDescription": "looking for lots of stuff on this drums / guitar track. surprise me!",
+      "completeDescription": "",
+      "id": 13
     }
   ],
   "users": [
@@ -401,15 +412,15 @@
       "type": "bass"
     },
     {
-      "id": 5,
+      "id": 4,
       "type": "keys"
     },
     {
-      "id": 6,
+      "id": 5,
       "type": "strings"
     },
     {
-      "id": 7,
+      "id": 6,
       "type": "brass"
     },
     {
@@ -417,10 +428,31 @@
       "type": "surprise me"
     }
   ],
-  "requestSongRelationships": [{
-    "id": 1,
-    "songId": 1,
-    "requestId": 2,
-    "userId": 2
-  }]
+  "requestSongRelationships": [
+    {
+      "songId": 13,
+      "requestId": 5,
+      "id": 1
+    },
+    {
+      "songId": 13,
+      "requestId": 3,
+      "id": 2
+    },
+    {
+      "songId": 13,
+      "requestId": 4,
+      "id": 3
+    },
+    {
+      "songId": 13,
+      "requestId": 6,
+      "id": 4
+    },
+    {
+      "songId": 13,
+      "requestId": 7,
+      "id": 5
+    }
+  ]
 }
