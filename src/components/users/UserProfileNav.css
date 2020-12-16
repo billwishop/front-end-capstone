@@ -1,5 +1,4 @@
 .profileNavbar {
-    
     flex-wrap: nowrap;
     justify-content: left;
     padding: 12px 0;
@@ -17,4 +16,8 @@
     color: black;
     margin-top: 2em;
     padding: .5em;
+}
+
+.profile__name {
+    margin-left: .5em;
 }

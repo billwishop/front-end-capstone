@@ -3,15 +3,18 @@ import { SongContext } from '../songs/SongProvider'
 import { Route } from "react-router-dom";
 import { ProfileNavBar } from "./UserProfileNav"
 import { CompleteSongCard } from "../songs/CompleteSongs/CompleteSongCard";
+import { UserContext} from "../users/UserProvider"
 
 export const ProfileCompleteList = (props) => {
     const { songs, getSongs } = useContext(SongContext)
+    const { users, getUsers } = useContext(UserContext)
 
     const [filteredSongs, SetSongs] = useState([])
-    const [user, SetUser] = useState({})
+    const [user, SetUser] = useState([])
 
     useEffect(() => {
         getSongs()
+        .then(getUsers)
     }, [])
 
     /* 
@@ -30,21 +33,41 @@ export const ProfileCompleteList = (props) => {
         }
     }, [songs])
 
+    // filters for the owner of the profile that is being viewed and sets the state for use in the render
+    useEffect(() => {
+        if(props.match.params.userId){
+            const profileUser = users.filter(u => u.id === parseInt(props.match.params.userId)) 
+            SetUser(profileUser)
+        } else {
+            const profileUser = users.filter(u => u.id === parseInt(localStorage.getItem('app_user_id')))
+            SetUser(profileUser)
+        }
+    }, [users])
+
+    if(user.length){
+        console.log(user);}
     return (
         <div className="profile">
             <Route render={props => <ProfileNavBar {...props} />} /> 
-            <div>
 
-            {filteredSongs.length
-                ? <div>
-                {
-                    filteredSongs.map(song => {
-                        return <CompleteSongCard key={song.id} completeSong={song} />
+            <div>
+                {user.length
+                    ? 
+                    user.map(u => {
+                        return <h1 className="profile__name">{u.name}</h1>
                     })
+                    :''
                 }
-                </div>
-                : "No completed songs to display"
-            }     
+                {filteredSongs.length
+                    ? <div>
+                    {
+                        filteredSongs.map(song => {
+                            return <CompleteSongCard key={song.id} completeSong={song} />
+                        })
+                    }
+                    </div>
+                    : "No completed songs to display"
+                }     
             </div>
         </div>
     )

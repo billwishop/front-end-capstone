@@ -76,12 +76,9 @@ export const IncompleteSongForm = props => {
             setSelectedRequests(prev =>[...prev, parseInt(evt.target.id)]);
         } else {
             // remove item from array if unchecked
-            for(var i=0; i < selectedRequests.length; i++){
-                if(selectedRequests[i] === parseInt(evt.target.id)){
-                    selectedRequests.splice(i, 1);
-                    i--;
-                }
-            }
+            const removed = selectedRequests.filter(id => id != parseInt(evt.target.id))
+            setSelectedRequests(removed)
+            console.log(removed);
     } 
 }
     // upload incomplete song form
