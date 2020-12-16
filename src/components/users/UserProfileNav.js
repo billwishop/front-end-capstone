@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from "react"
+import React from "react"
 import {Link} from "react-router-dom"
-import { SongContext } from "../songs/SongProvider"
 import './UserProfileNav.css'
 
 

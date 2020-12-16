@@ -30,21 +30,17 @@ export const IncompleteBrowseList = () => {
         const filteredRelationships = requestSongs.filter(rel => {
             return selectedRequests.find(selected => selected === rel.requestId)
         })
-        console.log('requestSongs',requestSongs,'filteredRelationships:',filteredRelationships);
         // filtering selected relationships 
         const filteredByRequest = filteredSongs.filter(s => {
             return filteredRelationships.find(rel => s.id === rel.songId)
         })
         setFilteredByRequest(filteredByRequest)
-        console.log('filteredByRequest:', filteredByRequest, 'filteredSongs:', filteredSongs)  
-
     }, [selectedRequests])
 
     const checkboxControl = (evt) => {
         // check if box is being unchecked vs checked
         if(evt.target.checked === true){
             setSelectedRequests(prev => [...prev, parseInt(evt.target.id)])
-            console.log('selected', evt.target.id, 'selectedRequests:', selectedRequests);
         } else {
             // remove item from array if unchecked
             const removed = selectedRequests.filter(id => id != parseInt(evt.target.id))
