@@ -31,9 +31,13 @@ export const ApplicationViews = props => {
 
             <SongProvider>
                 <UserProvider>
-                    <Route exact path="/" render={
-                        props => <IncompleteBrowseList {...props} />
-                    } />
+                    <RequestSongProvider>                        
+                        <RequestProvider>                            
+                            <Route exact path="/" render={
+                                props => <IncompleteBrowseList {...props} />
+                            } />
+                        </RequestProvider>
+                    </RequestSongProvider>
                 </UserProvider>
             </SongProvider>
 
