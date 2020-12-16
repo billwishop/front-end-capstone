@@ -21,4 +21,5 @@
 
 .logo {
     font-size: larger;
+    flex-wrap: nowrap;
 }
