@@ -62,7 +62,7 @@ export const StemForm = props => {
     }
     // upload stem form
     return (
-        <div className="form">
+        <div className="form__section form">
             <div className="song__initial">
                     {song.id ?<IncompleteSongCard key={song.id} incompleteSong={song} /> :"Song Not Found"} 
                 </div>
