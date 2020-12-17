@@ -44,33 +44,37 @@ export const ApplicationViews = props => {
             <SongProvider>
                 <UserProvider>
                     <StemProvider>
-                        <Route path="/song/:songId(\d+)" render={
-                            props => <SongDetail {...props} />
-                        } />
-                        <Route path="/song/complete/:songId(\d+)" render={
-                            props => <CompleteSongForm {...props} />
-                        } />
-                        <Route path="/song/stem/:songId(\d+)" render={
-                            props => <StemForm {...props} />
-                        } />
-                        <Route path="/profile/incomplete/:userId(\d+)" render={
-                            props => <ProfileIncompleteList {...props} />
-                        } />
-                        <Route exact path="/profile/incomplete" render={
-                            props => <ProfileIncompleteList {...props} />
-                        } />
-                        <Route path="/profile/complete/:userId(\d+)" render={
-                            props => <ProfileCompleteList {...props} />
-                        } />
-                        <Route exact path="/profile/complete" render={
-                            props => <ProfileCompleteList {...props} />
-                        } />
-                        <Route path="/profile/stem/:userId(\d+)" render={
-                            props => <ProfileStemList {...props} />
-                        } />
-                        <Route exact path="/profile/stem" render={
-                            props => <ProfileStemList {...props} />
-                        } />
+                        <RequestSongProvider>
+                            <RequestProvider>
+                                <Route path="/song/:songId(\d+)" render={
+                                    props => <SongDetail {...props} />
+                                } />
+                                <Route path="/song/complete/:songId(\d+)" render={
+                                    props => <CompleteSongForm {...props} />
+                                } />
+                                <Route path="/song/stem/:songId(\d+)" render={
+                                    props => <StemForm {...props} />
+                                } />
+                                <Route path="/profile/incomplete/:userId(\d+)" render={
+                                    props => <ProfileIncompleteList {...props} />
+                                } />
+                                <Route exact path="/profile/incomplete" render={
+                                    props => <ProfileIncompleteList {...props} />
+                                } />
+                                <Route path="/profile/complete/:userId(\d+)" render={
+                                    props => <ProfileCompleteList {...props} />
+                                } />
+                                <Route exact path="/profile/complete" render={
+                                    props => <ProfileCompleteList {...props} />
+                                } />
+                                <Route path="/profile/stem/:userId(\d+)" render={
+                                    props => <ProfileStemList {...props} />
+                                } />
+                                <Route exact path="/profile/stem" render={
+                                    props => <ProfileStemList {...props} />
+                                } />
+                            </RequestProvider>
+                        </RequestSongProvider>
                     </StemProvider>
                 </UserProvider>
             </SongProvider>
