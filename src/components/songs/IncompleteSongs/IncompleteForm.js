@@ -96,7 +96,7 @@ export const IncompleteSongForm = props => {
             <div className="form__loading">
 
                 <div className="form">
-                    <input type="file" className="form__file"
+                    <input type="file" className="form__file btn"
                             onChange={evt => {
                                 setFile(evt.target.files[0])
                             }}>
@@ -140,7 +140,7 @@ export const IncompleteSongForm = props => {
                                 <h1 className="loading loading__five">*</h1> 
                             </>
                             : ''}
-                    <button className="form__button" type="submit"
+                    <button className="form__button btn" type="submit"
                         onClick={evt => {
                             console.log('submit button clicked')
                             if(songName.current.value != ""){

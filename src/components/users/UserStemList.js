@@ -26,10 +26,10 @@ export const ProfileStemList = (props) => {
     useEffect(() => {
         if(props.match.params.userId){
             const filtered = stems.filter(s => s.userId === parseInt(props.match.params.userId)) 
-            SetStems(filtered)
+            SetStems(filtered.reverse())
         } else {
             const filtered = stems.filter(s => s.userId === parseInt(localStorage.getItem('app_user_id')))
-            SetStems(filtered)
+            SetStems(filtered.reverse())
         }
     }, [stems])
 

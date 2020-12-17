@@ -18,7 +18,7 @@ export const CompleteSongCard = ({ completeSong }) => {
 
             {completeSong.userId === parseInt(localStorage.getItem("app_user_id"))
                 ?   <div>
-                        <button onClick={evt =>{
+                        <button className='btn' onClick={evt =>{
                         evt.preventDefault()
                         deleteSong(completeSong.id)}
                         }>delete</button>

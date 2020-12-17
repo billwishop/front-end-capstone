@@ -2,6 +2,8 @@ import React, { useContext } from "react"
 import { Link } from "react-router-dom"
 import ReactAudioPlayer from 'react-audio-player';
 import { StemContext } from './StemProvider'
+import { Button } from 'react-bootstrap'
+
 
 
 export const StemCard = ({ stem }) => {
@@ -28,13 +30,13 @@ export const StemCard = ({ stem }) => {
         
 
         {stem.userId === parseInt(localStorage.getItem("app_user_id"))
-            ?   <button onClick={evt =>{
+            ?   <Button className='btn' onClick={evt =>{
                 evt.preventDefault()
                 deleteStem(stem.id)}
-            }>delete</button>
+            }>delete</Button>
             
             :   <div className="audio__username">
-                    <Link to={`/profile/incomplete/${stem.userId}`}>
+                    <Link  to={`/profile/incomplete/${stem.userId}`}>
                         {stem.user.name}
                     </Link>
                 </div>

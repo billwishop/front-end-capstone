@@ -4,6 +4,7 @@ import firebase from "firebase"
 import { StemContext } from './StemProvider'
 import { IncompleteSongCard } from "../songs/IncompleteSongs/IncompleteSongCard"
 
+
 export const StemForm = props => {
     const {songs, getSongs} = useContext(SongContext)
     const {addStem} = useContext(StemContext)
@@ -70,7 +71,7 @@ export const StemForm = props => {
             <form className="form">
                 <h1 className="form__heading">upload a stem</h1>
 
-                <input type="file" className="form__file"
+                <input type="file" className="btn form__file"
                         onChange={evt => {
                             setFile(evt.target.files[0])
                         }}>
@@ -102,7 +103,7 @@ export const StemForm = props => {
                         required placeholder="enter description here" />
                 </div>
 
-                <button className="form__button" type="submit"
+                <button className="btn form__button" type="submit"
                     onClick={evt => {
                         console.log('submit button clicked')
                         if(name.current.value != ""){

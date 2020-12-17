@@ -22,7 +22,7 @@ export const IncompleteBrowseList = () => {
     useEffect(() => {
         // incomplete songs that do not belong to the active user
         const browseSongs = songs.filter(s => s.userId !== parseInt(localStorage.getItem('app_user_id')) && s.completeURL === "") 
-        SetSong(browseSongs)
+        SetSong(browseSongs.reverse())
     }, [songs])
 
     useEffect(() => {
