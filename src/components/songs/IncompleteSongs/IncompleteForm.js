@@ -88,7 +88,7 @@ export const IncompleteSongForm = props => {
 }
     // upload incomplete song form
     return (
-        <form className="form">
+        <form className="form form__section">
             <h1 className="form__heading">upload an incomplete track</h1>
             <h3 className="form__subheading">|| other users will help</h3>
             <h3 className="form__subheading">|| you complete it</h3>

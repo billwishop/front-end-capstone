@@ -1,5 +1,5 @@
 import React from "react"
-import {Link} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 import './UserProfileNav.css'
 
 
@@ -13,13 +13,33 @@ export const ProfileNavBar = props => {
                 <div>
                 <ul className="profileNavbar">
                     <li className="profileNavbar__item">
-                        <Link className="profileNavbar__link" to={`/profile/incomplete/${props.match.params.userId}`}>incomplete</Link>
+                        <NavLink className="profileNavbar__NavLink" to={`/profile/incomplete/${props.match.params.userId}`}
+                            style={{
+                                color: 'black',
+                                }}
+                            activeStyle={{
+                                fontWeight: 'bold',
+                            }}>incomplete</NavLink>
                     </li>
                     <li className="profileNavbar__item">
-                        <Link className="profileNavbar__link" to={`/profile/complete/${props.match.params.userId}`}>complete</Link>
+                        <NavLink className="profileNavbar__NavLink" to={`/profile/complete/${props.match.params.userId}`}
+                            style={{
+                                color: 'black',
+                                textDecoration: 'none'
+                                }}
+                            activeStyle={{
+                                fontWeight: 'bold',
+                            }}>complete</NavLink>
                     </li>
                     <li className="profileNavbar__item">
-                        <Link className="profileNavbar__link" to={`/profile/stem/${props.match.params.userId}`}>stems</Link>
+                        <NavLink className="profileNavbar__NavLink" to={`/profile/stem/${props.match.params.userId}`}
+                            style={{
+                                color: 'black',
+                                textDecoration: 'none'
+                                }}
+                            activeStyle={{
+                                fontWeight: 'bold',
+                            }}>stems</NavLink>
                     </li>
                 </ul>
             </div>
@@ -29,13 +49,34 @@ export const ProfileNavBar = props => {
             <div>
                 <ul className="profileNavbar">
                     <li className="profileNavbar__item">
-                        <Link className="profileNavbar__link" to="/profile/incomplete">incomplete</Link>
+                        <NavLink className="profileNavbar__NavLink" to="/profile/incomplete"
+                            style={{
+                                color: 'black',
+                                textDecoration: 'none'
+                                }}
+                            activeStyle={{
+                                fontWeight: 'bold',
+                            }}>incomplete</NavLink>
                     </li>
                     <li className="profileNavbar__item">
-                        <Link className="profileNavbar__link" to="/profile/complete">complete</Link>
+                        <NavLink className="profileNavbar__NavLink" to="/profile/complete"
+                            style={{
+                                color: 'black',
+                                textDecoration: 'none'
+                                }}
+                            activeStyle={{
+                                fontWeight: 'bold',
+                            }}>complete</NavLink>
                     </li>
                     <li className="profileNavbar__item">
-                        <Link className="profileNavbar__link" to="/profile/stem">stems</Link>
+                        <NavLink className="profileNavbar__NavLink" to="/profile/stem"
+                            style={{
+                                color: 'black',
+                                textDecoration: 'none'
+                                }}
+                            activeStyle={{
+                                fontWeight: 'bold',
+                            }}>stems</NavLink>
                     </li>
                 </ul>
             </div>

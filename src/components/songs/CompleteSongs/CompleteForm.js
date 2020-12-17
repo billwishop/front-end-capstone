@@ -76,12 +76,12 @@ export const CompleteSongForm = props => {
 
     // upload complete song form
     return (
-        <div className="form">
+        <div className="form form__section">
 
             <div className="song__initial">
                 {song.id ?<IncompleteSongCard key={song.id} incompleteSong={song} /> :"Song Not Found"} 
             </div>
-            <form className="completeSongForm">
+            <form className="form">
                 <h1 className="form__heading">upload completed track</h1>
 
                 <input type="file" className="form__file"

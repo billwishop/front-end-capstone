@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react"
-import {Link} from "react-router-dom"
+import {NavLink} from "react-router-dom"
 import "./NavBar.css"
 import { UserContext } from '../users/UserProvider'
 
@@ -27,13 +27,37 @@ export const NavBar = props => {
                 </div>               
             </li>
             <li className="navbar__item">
-                <Link className="navbar__link" to="/">browse</Link>
+                <NavLink className="navbar__link" exact to="/"
+                    style={{
+                        color: 'black',
+                        textDecoration: 'underline'
+                        }}
+                    activeStyle={{
+                        fontWeight: 'bold',
+                        textDecoration: 'none'
+                    }}>browse</NavLink>
             </li>
             <li className="navbar__item">
-                <Link className="navbar__link" to="/upload">upload</Link>
+                <NavLink className="navbar__link" to="/upload"
+                    style={{
+                        color: 'black',
+                        textDecoration: 'underline'
+                        }}
+                    activeStyle={{
+                        fontWeight: 'bold',
+                        textDecoration: 'none'
+                    }}>upload</NavLink>
             </li>
             <li className="navbar__item">
-                <Link className="navbar__link" to="/profile/incomplete">profile</Link>
+                <NavLink className="navbar__link" to="/profile/incomplete"
+                    style={{
+                        color: 'black',
+                        textDecoration: 'underline'
+                        }}
+                    activeStyle={{
+                        fontWeight: 'bold',
+                        textDecoration: 'none'
+                    }}>profile</NavLink>
             </li>
             <li className="navbar__item">
                 <div className="activeUser">
