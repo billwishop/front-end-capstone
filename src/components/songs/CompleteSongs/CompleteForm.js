@@ -14,6 +14,8 @@ export const CompleteSongForm = props => {
     const [filteredStems, setStems] = useState([])
     // uploaded file
     const [file, setFile] = useState({})
+    // loading state
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         getSongs()
@@ -41,6 +43,8 @@ export const CompleteSongForm = props => {
         const storage = firebase.storage();
         const storageRef = storage.ref();
         const audioRef = storageRef.child('audio/' + file.name)
+
+        setLoading(true)
 
         console.log("uploading")
         // audio upload to firebase
@@ -108,7 +112,15 @@ export const CompleteSongForm = props => {
 
                 <input type="text" className="form__description" ref={completeDescription} 
                         required autoFocus placeholder="enter description here" />
-
+{loading ? 
+                            <>
+                                <h1 className="loading loading__one">*</h1> 
+                                <h1 className="loading loading__two">*</h1> 
+                                <h1 className="loading loading__three">*</h1> 
+                                <h1 className="loading loading__four">*</h1> 
+                                <h1 className="loading loading__five">*</h1> 
+                            </>
+                            : ''}
                 <button className="form__button" type="submit"
                     onClick={evt => {
                         console.log('submit button clicked')
@@ -121,6 +133,14 @@ export const CompleteSongForm = props => {
                         }
                         
                     }}>submit</button>
+
+                    {loading ? 
+                            <>
+                                <div>
+                                    uploading...
+                                </div>
+                            </>
+                            : ''}
             </form>
         </div>
 

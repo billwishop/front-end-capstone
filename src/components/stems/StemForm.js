@@ -12,6 +12,8 @@ export const StemForm = props => {
     const [song, setSong] = useState({})
     // uploaded stem file
     const [file, setFile] = useState({})
+     // loading state
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         getSongs()
@@ -33,6 +35,8 @@ export const StemForm = props => {
         const storage = firebase.storage();
         const storageRef = storage.ref();
         const audioRef = storageRef.child('audio/' + file.name)
+
+        setLoading(true)
 
         console.log("uploading")
         // audio upload to firebase
@@ -84,6 +88,15 @@ export const StemForm = props => {
                 <div>
                 <label className="form__label">description</label>
                 </div>
+                {loading ? 
+                            <>
+                                <h1 className="loading loading__one">*</h1> 
+                                <h1 className="loading loading__two">*</h1> 
+                                <h1 className="loading loading__three">*</h1> 
+                                <h1 className="loading loading__four">*</h1> 
+                                <h1 className="loading loading__five">*</h1> 
+                            </>
+                            : ''}
                 <div>
                 <input type="text" className="form__description" ref={description} 
                         required placeholder="enter description here" />
@@ -103,6 +116,13 @@ export const StemForm = props => {
                             window.alert("please enter a stem title")
                         }
                     }}>submit</button>
+                    {loading ? 
+                            <>
+                                <div>
+                                    uploading...
+                                </div>
+                            </>
+                            : ''}
             </form>
         </div>
 

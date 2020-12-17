@@ -19,6 +19,9 @@ export const IncompleteSongForm = props => {
     // uploaded file
     const [file, setFile] = useState({})
 
+    // loading state
+    const [loading, setLoading] = useState(false)
+
     useEffect(() => {
         getRequests()
     }, [])
@@ -31,6 +34,8 @@ export const IncompleteSongForm = props => {
         const storage = firebase.storage();
         const storageRef = storage.ref();
         const audioRef = storageRef.child('audio/' + file.name)
+
+        setLoading(true)
 
         console.log("uploading")
         // audio upload to firebase
@@ -88,56 +93,81 @@ export const IncompleteSongForm = props => {
             <h3 className="form__subheading">|| other users will help</h3>
             <h3 className="form__subheading">|| you complete it</h3>
 
-            <div className="form">
-                <input type="file" className="form__file"
-                        onChange={evt => {
-                            setFile(evt.target.files[0])
-                        }}>
-                </input>
+            <div className="form__loading">
 
-                <div>
-                <label className="form__label">title</label>
-                </div>
-                <div>
-                <input type="text" className="form__title" ref={songName} 
-                        required autoFocus placeholder="enter title here" />
-                </div>
+                <div className="form">
+                    <input type="file" className="form__file"
+                            onChange={evt => {
+                                setFile(evt.target.files[0])
+                            }}>
+                    </input>
 
-                <div className="form__requests">
-                {
-                    requests.map(type => {
-                        return <>
-                            <input type="checkbox" key={type.id} id={type.id} name="checkbox"
-                                onChange={evt => {
-                                    checkboxControl(evt)
-                                }} />
-                                <label>{type.type}</label>
-                        </>
-                    })
-                }
-                </div>
+                    <div>
+                    <label className="form__label">title</label>
+                    </div>
+                    <div>
+                    <input type="text" className="form__title" ref={songName} 
+                            required autoFocus placeholder="enter title here" />
+                    </div>
 
-                <div>
-                <label className="form__label">description</label>
-                </div>
-                <div>
-                <textarea type="text" className="form__description" ref={incompleteDescription} 
-                        required placeholder="enter description here" />
-                </div>
-                <button className="form__button" type="submit"
-                    onClick={evt => {
-                        console.log('submit button clicked')
-                        if(songName.current.value != ""){
-                            if(incompleteDescription.current.value != ""){
-                                evt.preventDefault()                              
-                                constructIncompleteSong()
+                    <div className="form__requests">
+                    {
+                        requests.map(type => {
+                            return <>
+                                <input type="checkbox" key={type.id} id={type.id} name="checkbox"
+                                    onChange={evt => {
+                                        checkboxControl(evt)
+                                    }} />
+                                    <label>{type.type}</label>
+                            </>
+                        })
+                    }
+                    </div>
+
+                    <div>
+                    <label className="form__label">description</label>
+                    </div>
+                    <div>
+                    <textarea type="text" className="form__description" ref={incompleteDescription} 
+                            required placeholder="enter description here" />
+                    </div>
+                    {loading ? 
+                            <>
+                                <h1 className="loading loading__one">*</h1> 
+                                <h1 className="loading loading__two">*</h1> 
+                                <h1 className="loading loading__three">*</h1> 
+                                <h1 className="loading loading__four">*</h1> 
+                                <h1 className="loading loading__five">*</h1> 
+                            </>
+                            : ''}
+                    <button className="form__button" type="submit"
+                        onClick={evt => {
+                            console.log('submit button clicked')
+                            if(songName.current.value != ""){
+                                if(incompleteDescription.current.value != ""){
+                                    evt.preventDefault()                              
+                                    constructIncompleteSong()
+                                } else {
+                                    window.alert("please enter a description")
+                                }
                             } else {
-                                window.alert("please enter a description")
-                            }
-                        } else {
-                            window.alert("please enter a song title")
-                        } 
-                    }}>submit</button>
+                                window.alert("please enter a song title")
+                            } 
+                        }}>submit</button>
+
+                        {loading ? 
+                            <>
+                                <div>
+                                    uploading...
+                                </div>
+                            </>
+                            : ''}
+                </div>
+
+                <div>
+                    
+                    
+                </div>
             </div>
         </form>
 

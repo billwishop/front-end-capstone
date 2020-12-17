@@ -109,3 +109,48 @@
     background-color: white;
     /* width: 60em; */
 }
+
+.loading {
+    animation-name:rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position:absolute;
+    display: inline-block;
+    box-shadow:  
+        5px 5px #C8B9FF, 
+        8px 8px #605BFF,
+        11px 11px #C8B9FF,
+        14px 14px #605BFF; 
+    
+    color: #FF8F87;
+    border-radius: 2em;
+    
+}
+
+.loading__one {
+    margin-left: 17em;
+}
+
+.loading__two {
+    margin-left: 5em;
+}
+
+.loading__three {
+    margin-left: 8em;
+}
+
+.loading__four {
+    margin-left: 11em;
+}
+
+.loading__five {
+    margin-left: 14em;
+}
+
+@keyframes rotate{
+
+    100%{
+      transform:rotate(360deg);
+    }
+  }
