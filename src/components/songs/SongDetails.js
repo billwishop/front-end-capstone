@@ -5,19 +5,24 @@ import { StemCard } from '../stems/StemCard'
 import './Song.css'
 import { CompleteSongCard } from './CompleteSongs/CompleteSongCard'
 import { IncompleteSongCard } from './IncompleteSongs/IncompleteSongCard'
+import { RequestSongContext } from '../requestSongRelationships/RequestSongProvider'
 
 export const SongDetail = props => {
     const {songs, getSongs} = useContext(SongContext)
     const {stems, getStems} = useContext(StemContext)
+    const { requestSongs, getRequestSongs } = useContext(RequestSongContext)
 
     // set individual song object
     const [song, setSong] = useState({})
     // filtered stem array
     const [filteredStems, setStems] = useState([])
+    // request song relationships
+    const [relationships, setRelationships] = useState([])
 
     useEffect(() => {
         getSongs()
         .then(getStems)
+        .then(getRequestSongs)
     }, [])
 
     // find the song id and set the state
@@ -31,6 +36,12 @@ export const SongDetail = props => {
         const filteredStems = stems.filter(s => s.songId === parseInt(props.match.params.songId)) 
         setStems(filteredStems)
     }, [stems])
+
+    // find the request relationship tables for this song
+    useEffect(() => {
+        const relationships = requestSongs.filter(rel => rel.songId === parseInt(props.match.params.songId))
+        setRelationships(relationships)
+    }, [requestSongs])
 
     
     return (
@@ -59,7 +70,7 @@ export const SongDetail = props => {
                             ? <h2 className="stems__header">stem submissions</h2>
                             : <h2 className="stems__header">stem submission</h2>
                         )
-                        : ""
+                        : "no stem submissions yet"
                     }
                     
                     {
@@ -99,6 +110,18 @@ export const SongDetail = props => {
                         <div className='song__description'>{song.incompleteDescription}</div>
                         </div>    
                         }
+
+                    {relationships.length
+                        ? <div className='song__requests'>
+                        <h3 className='song__requestHeading'>looking for:</h3>
+                        {relationships.map((req)=> {
+                            return <div key={req.request.id} className='request'>{req.request.type}</div>
+                        })}
+
+                        </div> 
+                        :""
+                    }
+
                         
             </section>
 

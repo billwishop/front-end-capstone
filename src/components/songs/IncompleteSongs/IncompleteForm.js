@@ -64,7 +64,7 @@ export const IncompleteSongForm = props => {
                     })
                 })
                 // take user to browse page after upload
-                .then(() => props.history.push('/'))
+                .then(() => props.history.push('/profile/incomplete'))
             })
         })
     }
@@ -92,7 +92,6 @@ export const IncompleteSongForm = props => {
                 <input type="file" className="form__file"
                         onChange={evt => {
                             setFile(evt.target.files[0])
-                            console.log(file.name)
                         }}>
                 </input>
 

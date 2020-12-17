@@ -44,8 +44,7 @@ export const ProfileCompleteList = (props) => {
         }
     }, [users])
 
-    if(user.length){
-        console.log(user);}
+
     return (
         <div className="profile">
             <Route render={props => <ProfileNavBar {...props} />} /> 
