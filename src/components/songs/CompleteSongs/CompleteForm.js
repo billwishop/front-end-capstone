@@ -84,7 +84,7 @@ export const CompleteSongForm = props => {
             <form className="form">
                 <h1 className="form__heading">upload completed track</h1>
 
-                <input type="file" className="form__file"
+                <input type="file" className="btn form__file"
                         onChange={evt => {
                             setFile(evt.target.files[0])
                         }}>
@@ -121,18 +121,20 @@ export const CompleteSongForm = props => {
                                 <h1 className="loading loading__five">*</h1> 
                             </>
                             : ''}
-                <button className="form__button" type="submit"
-                    onClick={evt => {
-                        console.log('submit button clicked')
-                        
-                        if(completeDescription.current.value != ""){
-                            evt.preventDefault()
-                            constructCompleteSong()
-                        } else {
-                            window.alert("please enter a description")
-                        }
-                        
-                    }}>submit</button>
+                <div>
+                    <button className="btn form__button" type="submit"
+                        onClick={evt => {
+                            console.log('submit button clicked')
+                            
+                            if(completeDescription.current.value != ""){
+                                evt.preventDefault()
+                                constructCompleteSong()
+                            } else {
+                                window.alert("please enter a description")
+                            }
+                            
+                        }}>submit</button>
+                </div>
 
                     {loading ? 
                             <>

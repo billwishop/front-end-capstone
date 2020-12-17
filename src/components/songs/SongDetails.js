@@ -6,6 +6,7 @@ import './Song.css'
 import { CompleteSongCard } from './CompleteSongs/CompleteSongCard'
 import { IncompleteSongCard } from './IncompleteSongs/IncompleteSongCard'
 import { RequestSongContext } from '../requestSongRelationships/RequestSongProvider'
+import Button from 'react-bootstrap/Button'
 
 export const SongDetail = props => {
     const {songs, getSongs} = useContext(SongContext)
@@ -84,17 +85,19 @@ export const SongDetail = props => {
             <section className="song__right">
                     {(song.completeURL || parseInt(localStorage.getItem("app_user_id")) === song.userId)
                         ? "" 
-                        :<button onClick={evt =>{
+                        :<Button variant='primary' className="btn" 
+                            onClick={evt =>{
                             evt.preventDefault()
                             props.history.push(`/song/stem/${song.id}`)}
-                            }>add to the song</button>}
+                            }>add to the song</Button>}
 
                     {(song.completeURL || parseInt(localStorage.getItem("app_user_id")) !== song.userId)
                         ? "" 
-                        :<button onClick={evt =>{
+                        :<Button variant='primary' className="btn"
+                            onClick={evt =>{
                             evt.preventDefault()
                             props.history.push(`/song/complete/${song.id}`)}
-                            }>mark as complete</button>}
+                            }>mark as complete</Button>}
                     
                     {song.completeURL
                         ? <div className='song__statusSection'>

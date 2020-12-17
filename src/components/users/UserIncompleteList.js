@@ -26,10 +26,10 @@ export const ProfileIncompleteList = (props) => {
     useEffect(() => {
         if(props.match.params.userId){
             const incompleteSongs = songs.filter(s => s.userId === parseInt(props.match.params.userId) && s.completeURL === "") 
-            SetSongs(incompleteSongs)
+            SetSongs(incompleteSongs.reverse())
         } else {
             const incompleteSongs = songs.filter(s => s.userId === parseInt(localStorage.getItem('app_user_id')) && s.completeURL === "")
-            SetSongs(incompleteSongs)
+            SetSongs(incompleteSongs.reverse())
         }
     }, [songs])
 
