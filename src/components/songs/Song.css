@@ -3,7 +3,7 @@
 }
 
 .audio__card, .filter {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
     transition: 0.3s;
     width: 30em;
     padding: 2em;
@@ -16,12 +16,12 @@
         14px 14px #605BFF; 
     border: 1px solid #605BFF;
     background-color: white;
+   position: inherit;
 }
 
 
 .audio__card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    border: 0;
 }
 
 .featured {

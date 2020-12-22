@@ -92,11 +92,11 @@
       "userId": 2,
       "songName": "Drummer's Gotta Drum",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
-      "completeURL": "",
+      "completeURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=d842f6f1-7c84-478f-b93b-a4d1f125fa22",
       "incompleteTimestamp": 1607482258989,
-      "completeTimestamp": "",
+      "completeTimestamp": 1608308809449,
       "incompleteDescription": "Drummer Boi",
-      "completeDescription": "",
+      "completeDescription": "Thanks for the fuzz guitar. Just what this track needed.",
       "id": 7
     },
     {
@@ -175,6 +175,17 @@
       "incompleteDescription": "Surprise me!",
       "completeDescription": "",
       "id": 16
+    },
+    {
+      "userId": 1,
+      "songName": "Purple Drain",
+      "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=2c9158f9-414d-4454-8a94-4c49e5afe187",
+      "completeURL": "",
+      "incompleteTimestamp": 1608252885179,
+      "completeTimestamp": "",
+      "incompleteDescription": "Funky tune, looking for some drums and keys!",
+      "completeDescription": "",
+      "id": 17
     }
   ],
   "users": [
@@ -273,11 +284,11 @@
     {
       "userId": 3,
       "songId": 7,
-      "name": "Stem 4",
+      "name": "Fuzz Guitar",
       "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
       "timestamp": 1607482258970,
-      "description": "Gotta Drum",
-      "chosen": false,
+      "description": "Distorted through a silicon fuzz into a vox ac-30",
+      "chosen": true,
       "id": 7
     },
     {
@@ -317,7 +328,7 @@
       "timestamp": 1607881658753,
       "description": "Drums for your song",
       "chosen": true,
-      "name": "New Stem ",
+      "name": "Big Drums",
       "id": 11
     },
     {
@@ -327,7 +338,7 @@
       "timestamp": 1607881658753,
       "description": "Drums for your song",
       "chosen": false,
-      "name": "New Stem ",
+      "name": "Moving n Grooving",
       "id": 19
     },
     {
@@ -347,13 +358,13 @@
       "timestamp": 1607881658753,
       "description": "Drums for your song",
       "chosen": false,
-      "name": "New Stem ",
+      "name": "Low-Key Drums",
       "id": 21
     },
     {
       "userId": 4,
       "songId": 7,
-      "name": "Stem!!",
+      "name": "Distorted Guitar",
       "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
       "timestamp": 1607482258970,
       "description": "Great stem for your great track",
@@ -449,6 +460,26 @@
       "chosen": false,
       "name": "Bass",
       "id": 31
+    },
+    {
+      "songId": 14,
+      "userId": 1,
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=45d9360e-064d-4124-99e9-63a1beb0fc81",
+      "timestamp": 1608252807699,
+      "description": "Les Paul through a fender reverb with some modulated delay",
+      "chosen": false,
+      "name": "Atmospheric Guitar",
+      "id": 32
+    },
+    {
+      "songId": 14,
+      "userId": 2,
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=2e3933c3-d57e-4f4a-b06c-2f60523e1045",
+      "timestamp": 1608308739090,
+      "description": "Dry guitar because reverb sucks",
+      "chosen": false,
+      "name": "DI Guitar ",
+      "id": 33
     }
   ],
   "requests": [
@@ -571,6 +602,16 @@
       "songId": 16,
       "requestId": 7,
       "id": 18
+    },
+    {
+      "songId": 17,
+      "requestId": 1,
+      "id": 19
+    },
+    {
+      "songId": 17,
+      "requestId": 4,
+      "id": 20
     }
   ]
 }
