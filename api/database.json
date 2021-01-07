@@ -2,95 +2,95 @@
   "songs": [
     {
       "userId": 1,
-      "songName": "Title: User 1 - Song 1",
+      "songName": "Nothing Lasts Forever",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
       "completeURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=e4f394be-fddf-49b5-9bbb-1bff69d1906f",
       "incompleteTimestamp": 1607458974778,
       "completeTimestamp": 1607621845333,
-      "incompleteDescription": "User 1's fave song",
-      "completeDescription": "this track is complete yall",
+      "incompleteDescription": "A song about how nothing lasts forever.",
+      "completeDescription": "This track is complete yall. Thanks for the contributions!",
       "id": 1
     },
     {
       "userId": 1,
-      "songName": "Title: User 1 - Song 2",
+      "songName": "Home Again",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
       "completeURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=a2d7d652-6171-4963-8fbf-4cec7a91b93f",
       "incompleteTimestamp": 1607458974778,
       "completeTimestamp": 1607967243366,
-      "incompleteDescription": "User 1's fave song",
+      "incompleteDescription": "A song I've been working on for a few weeks. Surprise me!",
       "completeDescription": "Thanks Dana for the great contribution! This song rocks",
       "id": 2
     },
     {
       "userId": 2,
-      "songName": "Title: User 2 - Song 3",
+      "songName": "Sunshine Days",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
       "completeURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
       "incompleteTimestamp": 1607458974778,
       "completeTimestamp": 1607990180662,
-      "incompleteDescription": "User 2's fave song",
+      "incompleteDescription": "Drums and ryhthm guitar. I'd love some bass.",
       "completeDescription": "So happy with how this turned out! Thanks for the great bass, Frohike!",
       "id": 3
     },
     {
       "userId": 1,
-      "songName": "Title: User 1 - Song 9",
+      "songName": "Babylon",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
       "completeURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=6a374281-edaa-4968-b8bd-7f10761d47da",
       "incompleteTimestamp": 1607458974778,
       "completeTimestamp": 1608048530556,
-      "incompleteDescription": "Very good song",
+      "incompleteDescription": "This song needs something but I'm not sure what. Surprise me!",
       "completeDescription": "Thanks for the synth",
       "id": 9
     },
     {
       "userId": 2,
-      "songName": "Title: User 2 - Song 4",
+      "songName": "Plus One",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
       "completeURL": "",
       "incompleteTimestamp": 1607458974778,
       "completeTimestamp": "",
-      "incompleteDescription": "User 2's fave song",
+      "incompleteDescription": "Ambient synth. I'm looking for some drums to give it more structure.",
       "completeDescription": "",
       "id": 4
     },
     {
       "userId": 3,
-      "songName": "Title: User 3 - Song 5",
+      "songName": "Scary Monsters",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
       "completeURL": "",
       "incompleteTimestamp": 1607458974778,
       "completeTimestamp": "",
-      "incompleteDescription": "User 3's fave song",
+      "incompleteDescription": "Guitar based song in A. The last chorus needs a lift. Any strings would be welcome.",
       "completeDescription": "",
       "id": 5
     },
     {
       "userId": 1,
-      "songName": "Title: User 1 - Song 6",
+      "songName": "Hellbound",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
       "completeURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=25c561ed-3fe1-40fe-abf7-02265f2d11d1",
       "incompleteTimestamp": 1607458974778,
       "completeTimestamp": 1607705703797,
-      "incompleteDescription": "User 1's fave song",
+      "incompleteDescription": "Bass and drums, inspired by Curtis Mayfield. Any rhythmic guitar players out there want to add anything?",
       "completeDescription": "Can't believe how great this track turned out!! Thanks for the drums",
       "id": 6
     },
     {
       "userId": 1,
-      "songName": "Title: User 1 - Song 8",
+      "songName": "Jump the Shark",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
       "completeURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=25c561ed-3fe1-40fe-abf7-02265f2d11d1",
       "incompleteTimestamp": 1607458974778,
       "completeTimestamp": 1607705703797,
-      "incompleteDescription": "Best song probably ever",
+      "incompleteDescription": "Best song probably ever but needs something",
       "completeDescription": "Confirmed, best song ever",
       "id": 8
     },
     {
       "userId": 2,
-      "songName": "Drummer's Gotta Drum",
+      "songName": "John Doe",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
       "completeURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=d842f6f1-7c84-478f-b93b-a4d1f125fa22",
       "incompleteTimestamp": 1607482258989,
@@ -101,7 +101,7 @@
     },
     {
       "userId": 4,
-      "songName": "Fave Song",
+      "songName": "Three Words",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ab47be14-1478-46d2-9795-01f51b0036a8",
       "completeURL": "",
       "incompleteTimestamp": 1607458974778,
@@ -112,7 +112,7 @@
     },
     {
       "userId": 4,
-      "songName": "CSM",
+      "songName": "Salvation",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
       "completeURL": "",
       "incompleteTimestamp": 1607482258989,
@@ -128,13 +128,13 @@
       "completeURL": "",
       "incompleteTimestamp": 1608048319538,
       "completeTimestamp": "",
-      "incompleteDescription": "LEs Paul through a fender reverb",
+      "incompleteDescription": "Les Paul through a fender reverb and a driving p-bass track. I would love to hear some drums on this.",
       "completeDescription": "",
       "id": 12
     },
     {
       "userId": 2,
-      "songName": "new song",
+      "songName": "Salvage",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=ffd97dc6-baef-48e2-8cd0-fc06799efac3",
       "completeURL": "",
       "incompleteTimestamp": 1608074361637,
@@ -150,13 +150,13 @@
       "completeURL": "",
       "incompleteTimestamp": 1608218008333,
       "completeTimestamp": "",
-      "incompleteDescription": "I would love to hear some guitar leads and bass on this synth and drum track.",
+      "incompleteDescription": "I would love to hear some guitar on this bass, synth and drums track.",
       "completeDescription": "",
       "id": 14
     },
     {
       "userId": 4,
-      "songName": "Drums",
+      "songName": "Per Manum",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fdrumsbaby.wav?alt=media&token=c787b85b-55fc-48c5-b15f-4a0f6122a5d0",
       "completeURL": "",
       "incompleteTimestamp": 1608222994945,
@@ -177,6 +177,17 @@
       "id": 16
     },
     {
+      "userId": 2,
+      "songName": "CSM",
+      "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Frs09%20is%20a%20star%20bounce%2011.29.20.wav?alt=media&token=90172ef5-7b02-4f5a-b98d-c4c80e95cac9",
+      "completeURL": "",
+      "incompleteTimestamp": 1609716598724,
+      "completeTimestamp": "",
+      "incompleteDescription": "This is a beat with bass I've been working on. I would love to hear some layers on it. Surprise me!",
+      "completeDescription": "",
+      "id": 18
+    },
+    {
       "userId": 1,
       "songName": "Purple Drain",
       "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=2c9158f9-414d-4454-8a94-4c49e5afe187",
@@ -186,6 +197,17 @@
       "incompleteDescription": "Funky tune, looking for some drums and keys!",
       "completeDescription": "",
       "id": 17
+    },
+    {
+      "userId": 3,
+      "songName": "Lil Green Men",
+      "incompleteURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2FUpload%201.wav?alt=media&token=76835ee9-cedf-475a-81b1-4aa55cb69cdc",
+      "completeURL": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2FComplete.wav?alt=media&token=52c6bfe8-c998-4476-bb8d-2b10ea4e4dbc",
+      "incompleteTimestamp": 1609795328681,
+      "completeTimestamp": 1609862850615,
+      "incompleteDescription": "I recorded this beat. I have drums, bass and a synth like guitar rhythm part but it still needs something. I would love to hear a guitar riff over it. ",
+      "completeDescription": "Love the movement. This is perfect!",
+      "id": 19
     }
   ],
   "users": [
@@ -224,7 +246,7 @@
     {
       "userId": 2,
       "songId": 1,
-      "name": "Stem 1",
+      "name": "Heavy Drums",
       "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
       "timestamp": 1607482258995,
       "description": "Drummer Boi",
@@ -234,7 +256,7 @@
     {
       "userId": 3,
       "songId": 1,
-      "name": "Stem 2",
+      "name": "Synth",
       "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
       "timestamp": 1607482258970,
       "description": "Synth lead line played on a Moog Grandmother.",
@@ -244,7 +266,7 @@
     {
       "userId": 2,
       "songId": 6,
-      "name": "Stem 3",
+      "name": "Jazz Drums",
       "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
       "timestamp": 1607482258995,
       "description": "Drummer Boi",
@@ -254,7 +276,7 @@
     {
       "userId": 3,
       "songId": 2,
-      "name": "Stem 4",
+      "name": "Drums",
       "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
       "timestamp": 1607482258970,
       "description": "C&C kit recorded at Black Bird studio in Nashville, TN. Hope you like it!",
@@ -264,20 +286,20 @@
     {
       "userId": 1,
       "songId": 3,
-      "name": "Stem!!",
+      "name": "Mono Synth Lead Line",
       "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
       "timestamp": 1607482258970,
-      "description": "Great stem for your great track",
+      "description": "Great lead for your great track",
       "chosen": false,
       "id": 5
     },
     {
       "userId": 2,
       "songId": 4,
-      "name": "Stem 3",
+      "name": "Heavy Guitar",
       "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
       "timestamp": 1607482258995,
-      "description": "Drummer Boi",
+      "description": "Gibson SG through a Vox Ac-30.",
       "chosen": false,
       "id": 6
     },
@@ -314,10 +336,10 @@
     {
       "userId": 3,
       "songId": 8,
-      "name": "Stem!!",
+      "name": "Heavy Guitar",
       "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=e8bcf0e6-cd04-4bc6-9b40-dd1960bcbbb5",
       "timestamp": 1607482258970,
-      "description": "Great stem for your great track",
+      "description": "Doom and Gloom heavy guitar recorded through fifteen distortion pedals.",
       "chosen": false,
       "id": 10
     },
@@ -474,12 +496,52 @@
     {
       "songId": 14,
       "userId": 2,
-      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%202%20purple%20and%20gold.wav?alt=media&token=2e3933c3-d57e-4f4a-b06c-2f60523e1045",
-      "timestamp": 1608308739090,
-      "description": "Dry guitar because reverb sucks",
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2Fsample%20test%20purple%20and%20gold.wav?alt=media&token=bc67b8b3-2774-45c8-9efd-fd1e0101e70c",
+      "timestamp": 1609091225244,
+      "description": "Les Paul recorded through a fender reverb",
       "chosen": false,
-      "name": "DI Guitar ",
+      "name": "Dirty Guitar",
       "id": 33
+    },
+    {
+      "songId": 19,
+      "userId": 2,
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2F%20Upload%202.wav?alt=media&token=3d6c54f0-43b3-482f-b452-13db1dcbf8eb",
+      "timestamp": 1609795550778,
+      "description": "Here's a fairly compressed guitar part with some movement. Hopefully this is what you're looking for!",
+      "chosen": true,
+      "name": "Moving Riff",
+      "id": 34
+    },
+    {
+      "songId": 19,
+      "userId": 1,
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2F%20Upload%203.wav?alt=media&token=7af9b151-4749-4f91-8661-c06378824b19",
+      "timestamp": 1609795639587,
+      "description": "Here's a dirty guitar riff. Slightly bluesy but I think it fits well. ",
+      "chosen": false,
+      "name": "Sassy Riff",
+      "id": 35
+    },
+    {
+      "songId": 18,
+      "userId": 1,
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2FStem.wav?alt=media&token=a66c64dc-b8a7-49bf-b701-1797e55e09cb",
+      "timestamp": 1609796691615,
+      "description": "Les Paul played through a Bassman with way too much delay and reverb.",
+      "chosen": false,
+      "name": "Atmospheric Guitar",
+      "id": 36
+    },
+    {
+      "songId": 18,
+      "userId": 3,
+      "url": "https://firebasestorage.googleapis.com/v0/b/featurist.appspot.com/o/audio%2FStem.wav?alt=media&token=089e29b7-7656-40ef-abdb-f6cdb02205de",
+      "timestamp": 1609862757440,
+      "description": "Plugged straight into the console.",
+      "chosen": false,
+      "name": "DI Fuzz Guitar",
+      "id": 37
     }
   ],
   "requests": [
@@ -612,6 +674,36 @@
       "songId": 17,
       "requestId": 4,
       "id": 20
+    },
+    {
+      "songId": 18,
+      "requestId": 2,
+      "id": 21
+    },
+    {
+      "songId": 18,
+      "requestId": 7,
+      "id": 22
+    },
+    {
+      "songId": 18,
+      "requestId": 6,
+      "id": 23
+    },
+    {
+      "songId": 18,
+      "requestId": 5,
+      "id": 24
+    },
+    {
+      "songId": 19,
+      "requestId": 2,
+      "id": 25
+    },
+    {
+      "songId": 19,
+      "requestId": 7,
+      "id": 26
     }
   ]
 }

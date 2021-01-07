@@ -63,7 +63,10 @@ export const NavBar = props => {
                 <div className="activeUser">
                     {(activeUser ?activeUser.name :"")}
                 </div>               
+
             </li>
         </ul>
     )
 }
+
+
