@@ -89,10 +89,10 @@ export const IncompleteSongForm = props => {
     // upload incomplete song form
     return (
         <form className="form form__section">
+
             <h1 className="form__heading">upload an incomplete track</h1>
             <h3 className="form__subheading">|| other users will help</h3>
             <h3 className="form__subheading">|| you complete it</h3>
-
             <div className="form__loading">
 
                 <div className="form">
@@ -111,24 +111,27 @@ export const IncompleteSongForm = props => {
                     </div>
 
                     <div className="form__requests">
+                        <div>
+                        looking for: 
+                        </div>
                     {
                         requests.map(type => {
-                            return <>
+                            return <div>
                                 <input type="checkbox" key={type.id} id={type.id} name="checkbox"
                                     onChange={evt => {
                                         checkboxControl(evt)
                                     }} />
                                     <label>{type.type}</label>
-                            </>
+                            </div>
                         })
                     }
                     </div>
 
-                    <div>
+                    <div className="form__description">
                     <label className="form__label">description</label>
                     </div>
                     <div>
-                    <textarea type="text" className="form__description" ref={incompleteDescription} 
+                    <textarea type="text" ref={incompleteDescription} 
                             required placeholder="enter description here" />
                     </div>
                     {loading ? 

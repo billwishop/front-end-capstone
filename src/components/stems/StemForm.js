@@ -86,7 +86,7 @@ export const StemForm = props => {
                         required autoFocus placeholder="enter stem name here" />
                 </div>
                 
-                <div>
+                <div className="form__description">
                 <label className="form__label">description</label>
                 </div>
                 {loading ? 
@@ -99,7 +99,7 @@ export const StemForm = props => {
                             </>
                             : ''}
                 <div>
-                <input type="text" className="form__description" ref={description} 
+                <textarea type="text" ref={description} 
                         required placeholder="enter description here" />
                 </div>
 

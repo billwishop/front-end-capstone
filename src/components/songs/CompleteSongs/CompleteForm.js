@@ -106,11 +106,11 @@ export const CompleteSongForm = props => {
                     </div>
                 </div>
 
-                <div>
+                <div className="form__description">
                 <label className="form__label">description</label>
                 </div>
 
-                <input type="text" className="form__description" ref={completeDescription} 
+                <textarea type="text" ref={completeDescription} 
                         required autoFocus placeholder="enter description here" />
 {loading ? 
                             <>

@@ -112,6 +112,7 @@
 
 .form__section {
     width: 60em;
+    
 }
 
 .loading {
@@ -163,3 +164,22 @@
     margin: 0 0 0 .5em;
 }
 
+.form__requests {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 2em;
+    border-radius: 2em;
+    margin: 1em auto 1em auto;
+    box-shadow:  
+        5px 5px #C8B9FF, 
+        8px 8px #605BFF,
+        11px 11px #C8B9FF,
+        14px 14px #605BFF; 
+    border: 1px solid #605BFF;
+    background-color: white;
+}
+
+.song__requests,
+.form__description {
+    margin-top: 1em;
+}
