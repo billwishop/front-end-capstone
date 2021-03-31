@@ -90,7 +90,7 @@ export const IncompleteBrowseList = () => {
             </div>
                 <div className="song__right">
                     <h1>
-                        featurist - a collaborative musical environment
+                        featured - a collaborative musical environment
                     </h1>
                     <div>
                         browse from and contribute to unfinished music projects from other users. 
