@@ -8,7 +8,7 @@ import { ProfileNavBar } from "./users/UserProfileNav"
 import { UserProvider } from "./users/UserProvider"
 
 
-export const Featurist = () => (
+export const Featured = () => (
     <>
         <Route render={() => {
             if (localStorage.getItem("app_user_id")) {

@@ -23,7 +23,7 @@ export const NavBar = props => {
         <ul className="navbar">
             <li className="navbar__item">
                 <div className="logo">
-                    || featurist ||
+                    || featured ||
                 </div>               
             </li>
             <li className="navbar__item">
